@@ -55,8 +55,10 @@
 	  	<a class="exit-off-canvas"></a>
 
 	  </div>
-	</div>
 
-	<div id="map"></div>
+	 <div id="map"></div>
+
+  </div>
+
 
 <?php include("inc/footer.php") ?>
