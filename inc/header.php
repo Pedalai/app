@@ -3,11 +3,11 @@
 <!doctype html>
 <html xmlns:og="http://ogp.me/ns#" lang="pt-br">
 <head>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
 
-	<title><?php echo _TITLE ?></title>
+    <title><?php echo _TITLE ?></title>
 
-	<!-- META TAGS -->
+    <!-- META TAGS -->
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
@@ -26,12 +26,12 @@
     <link rel="apple-touch-icon" sizes="72x72" href="./apple-touch-icon-ipad.png" />
     <link rel="apple-touch-icon" sizes="114x114" href="./apple-touch-icon-iphone4.png" />
 
-	<!-- CSS -->
-	<link rel="canonical" href="#">
+    <!-- CSS -->
+    <link rel="canonical" href="#">
     <link rel="stylesheet" href="libs/css/foundation.css">
-	<link rel="stylesheet" href="dist/css/styles.combined.min.css">
+    <link rel="stylesheet" href="dist/css/styles.combined.min.css">
 
-	<!-- HUMANS -->
+    <!-- HUMANS -->
     <link type="text/plain" rel="author" href="http://www.dominio.com.br/humans.txt" />
 
     <!-- FAVICON E TOUCH ICON IN THE ROOT DIRECTORY -->

@@ -150,22 +150,23 @@ input {
   display: inline-block;
   width: 70%;
   margin-top: 5%;
+  left: 5%;
 }
 
-/* line 83, ../sass/partials/_general.scss */
+/* line 84, ../sass/partials/_general.scss */
 .title-primary {
   text-transform: uppercase;
   position: relative;
-  font-size: 1.3em !important;
-  left: 25px !important;
+  font-size: 1.2em !important;
+  left: 3px !important;
 }
 
-/* line 98, ../sass/partials/_general.scss */
+/* line 99, ../sass/partials/_general.scss */
 label.canvas-title {
   padding: 20px !important;
   font-size: 2em;
 }
-/* line 101, ../sass/partials/_general.scss */
+/* line 102, ../sass/partials/_general.scss */
 label.canvas-title span {
   text-transform: lowercase;
   background: #ffffff !important;
@@ -174,20 +175,27 @@ label.canvas-title span {
   margin-left: 15px;
 }
 
-/* line 110, ../sass/partials/_general.scss */
+/* line 111, ../sass/partials/_general.scss */
 .left-off-canvas-menu {
   height: 870%;
   padding-bottom: 20px;
 }
 
-/* line 120, ../sass/partials/_general.scss */
+/* line 117, ../sass/partials/_general.scss */
+.right-small {
+  top: 25%;
+  right: 5%;
+  background: black;
+}
+
+/* line 126, ../sass/partials/_general.scss */
 #map {
   width: 100%;
   height: 100%;
   z-index: -99999;
 }
 
-/* line 126, ../sass/partials/_general.scss */
+/* line 132, ../sass/partials/_general.scss */
 .off-canvas-wrap {
   position: absolute;
   top: 0;
