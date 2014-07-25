@@ -96,106 +96,156 @@ input {
   padding: 20px 10px;
 }
 
-/* line 33, ../sass/partials/_general.scss */
+/* line 29, ../sass/partials/_general.scss */
+.canvas-title {
+  font-size: 1.8em !important;
+}
+
+/* line 34, ../sass/partials/_general.scss */
 .canvas-list {
   border-bottom: 1px solid #262626;
 }
-/* line 36, ../sass/partials/_general.scss */
+/* line 37, ../sass/partials/_general.scss */
 .canvas-list a {
   padding-bottom: 20px;
-  padding-left: 40px !important;
+  padding-left: 50px !important;
   font-size: 2em;
   border: none !important;
   position: relative;
 }
-/* line 42, ../sass/partials/_general.scss */
+/* line 44, ../sass/partials/_general.scss */
+.canvas-list a.alone::before {
+  content: "";
+  background: transparent url("https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male-32.png") no-repeat center center;
+}
+/* line 50, ../sass/partials/_general.scss */
+.canvas-list a.group::before {
+  content: "";
+  background: transparent url("https://cdn2.iconfinder.com/data/icons/pittogrammi/142/88-32.png") no-repeat center center;
+}
+/* line 55, ../sass/partials/_general.scss */
 .canvas-list a::before {
   content: "";
-  width: 20px;
-  height: 20px;
-  background: red;
+  width: 30px;
+  height: 30px;
   display: inline-block;
   position: absolute;
   left: 10px;
+  top: 5px;
 }
 
-/* line 54, ../sass/partials/_general.scss */
+/* line 67, ../sass/partials/_general.scss */
 .legend-list {
-  height: 170px;
+  max-height: 330px;
   overflow-y: auto;
 }
 
-/* line 59, ../sass/partials/_general.scss */
+/* line 73, ../sass/partials/_general.scss */
 .legend-item {
   background: blue;
   padding: 10px 20px 10px 30px;
   font-size: 1.2em;
-  color: #999;
-  background-color: #444444;
+  color: #333333;
+  background-color: #fff;
   position: relative;
 }
-/* line 66, ../sass/partials/_general.scss */
+/* line 80, ../sass/partials/_general.scss */
 .legend-item::before {
   content: "";
   width: 10px;
   height: 10px;
-  background: pink;
+  background: #333333 !important;
   display: inline-block;
   position: absolute;
   left: 10px;
 }
 
-/* line 77, ../sass/partials/_general.scss */
+/* line 91, ../sass/partials/_general.scss */
 .tab-bar {
   display: inline-block;
   width: 70%;
   margin-top: 5%;
   left: 5%;
+  background: #ffffff;
+  border: 1px solid #333333;
+}
+/* line 100, ../sass/partials/_general.scss */
+.tab-bar .menu-icon span::after {
+  content: "";
+  box-shadow: 0 0px 0 1px #333333, 0 7px 0 1px #333333, 0 14px 0 1px #333333;
+}
+/* line 107, ../sass/partials/_general.scss */
+.tab-bar h1 {
+  color: #333333 !important;
 }
 
-/* line 84, ../sass/partials/_general.scss */
+/* line 113, ../sass/partials/_general.scss */
 .title-primary {
   text-transform: uppercase;
   position: relative;
   font-size: 1.2em !important;
   left: 3px !important;
+  color: #333333;
 }
 
-/* line 99, ../sass/partials/_general.scss */
+/* line 129, ../sass/partials/_general.scss */
 label.canvas-title {
   padding: 20px !important;
   font-size: 2em;
 }
-/* line 102, ../sass/partials/_general.scss */
+/* line 132, ../sass/partials/_general.scss */
 label.canvas-title span {
   text-transform: lowercase;
   background: #ffffff !important;
   display: inline-block !important;
-  padding: 5px 10px !important;
   margin-left: 15px;
+  font-size: .2em;
+  vertical-align: middle;
 }
 
-/* line 111, ../sass/partials/_general.scss */
+/* line 142, ../sass/partials/_general.scss */
 .left-off-canvas-menu {
   height: 870%;
   padding-bottom: 20px;
+  background: #ffffff;
 }
 
-/* line 117, ../sass/partials/_general.scss */
+/* line 151, ../sass/partials/_general.scss */
+ul.off-canvas-list li a {
+  color: #333333;
+}
+/* line 155, ../sass/partials/_general.scss */
+ul.off-canvas-list li label {
+  color: #333333;
+  background-color: #fff;
+  border-top: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+}
+
+/* line 164, ../sass/partials/_general.scss */
 .right-small {
   top: 25%;
   right: 5%;
-  background: black;
+  background: #fff;
+  border: none;
+}
+/* line 169, ../sass/partials/_general.scss */
+.right-small a {
+  background: url("https://cdn1.iconfinder.com/data/icons/free-mobile-icon-kit/32/Balloon.png") no-repeat center center;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #333333;
 }
 
-/* line 126, ../sass/partials/_general.scss */
+/* line 181, ../sass/partials/_general.scss */
 #map {
   width: 100%;
   height: 100%;
   z-index: -99999;
 }
 
-/* line 132, ../sass/partials/_general.scss */
+/* line 187, ../sass/partials/_general.scss */
 .off-canvas-wrap {
   position: absolute;
   top: 0;

@@ -20,9 +20,7 @@
 
       <!-- btn right canvas -->
       <section class="right-small">
-        <a class="right-off-canvas-toggle menu-icon" href="#">
-          <span></span>
-        </a>
+        <a class="menu-icon" href="#"></a>
       </section>
 
 
@@ -30,8 +28,8 @@
 	    <aside class="left-off-canvas-menu">
 	      <ul class="off-canvas-list">
 	        <li><label class="canvas-title">Quero Pedalar <span>mapa ></span></label></li>
-	        <li class="canvas-list"><a href="#">Sozinho</a></li>
-	        <li class="canvas-list"><a href="#">Em Grupo</a></li>
+	        <li class="canvas-list alone"><a class="alone" href="#">Sozinho</a></li>
+	        <li class="canvas-list"><a class="group" href="#">Em Grupo</a></li>
 	      </ul>
 
 	      <ul class="legend-list">
@@ -47,15 +45,6 @@
 	      	<li class="legend-item">Minha Legenda 10</li>
 	      	<li class="legend-item">Minha Legenda 11</li>
 	      	<li class="legend-item">Minha Legenda 12</li>
-	      </ul>
-	    </aside>
-
-	    <!-- menu direito -->
-	    <aside class="right-off-canvas-menu">
-	      <ul class="off-canvas-list">
-	        <li><label>Users</label></li>
-	        <li><a href="#">Hari Seldon</a></li>
-	        <li><a href="#">...</a></li>
 	      </ul>
 	    </aside>
 
