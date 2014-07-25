@@ -90,6 +90,96 @@ input {
   width: 990px;
 }
 
+/* line 24, ../sass/partials/_general.scss */
+.canvas-title, .canvas-list {
+  text-transform: uppercase;
+  padding: 20px 10px;
+}
+
+/* line 33, ../sass/partials/_general.scss */
+.canvas-list {
+  border-bottom: 1px solid #262626;
+}
+/* line 36, ../sass/partials/_general.scss */
+.canvas-list a {
+  padding-bottom: 20px;
+  padding-left: 40px !important;
+  font-size: 2em;
+  border: none !important;
+  position: relative;
+}
+/* line 42, ../sass/partials/_general.scss */
+.canvas-list a::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: red;
+  display: inline-block;
+  position: absolute;
+  left: 10px;
+}
+
+/* line 54, ../sass/partials/_general.scss */
+.legend-list {
+  height: 170px;
+  overflow-y: auto;
+}
+
+/* line 59, ../sass/partials/_general.scss */
+.legend-item {
+  background: blue;
+  padding: 10px 20px 10px 30px;
+  font-size: 1.2em;
+  color: #999;
+  background-color: #444444;
+  position: relative;
+}
+/* line 66, ../sass/partials/_general.scss */
+.legend-item::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: pink;
+  display: inline-block;
+  position: absolute;
+  left: 10px;
+}
+
+/* line 77, ../sass/partials/_general.scss */
+.tab-bar {
+  display: inline-block;
+  width: 70%;
+  margin-top: 5%;
+}
+
+/* line 83, ../sass/partials/_general.scss */
+.title-primary {
+  text-transform: uppercase;
+  position: relative;
+  font-size: 1.3em !important;
+  left: 25px !important;
+}
+
+/* line 98, ../sass/partials/_general.scss */
+label.canvas-title {
+  padding: 20px !important;
+  font-size: 2em;
+}
+/* line 101, ../sass/partials/_general.scss */
+label.canvas-title span {
+  text-transform: lowercase;
+  background: #ffffff !important;
+  display: inline-block !important;
+  padding: 5px 10px !important;
+  margin-left: 15px;
+}
+
+/* line 110, ../sass/partials/_general.scss */
+.left-off-canvas-menu {
+  height: 870%;
+  padding-bottom: 20px;
+}
+
 /* line 120, ../sass/partials/_general.scss */
 #map {
   width: 100%;
