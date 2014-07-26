@@ -10,36 +10,38 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
+    &::before {
+      content: "Carregando...";
+      position: absolute;
+      font-size: 2em;
+      text-align: center;
+      top: 50%;
+      display: inline-block;
+      width: 200px;
+      margin-left: -100px;
+      height: auto;
+      padding-bottom: 10px;
+      left: 50%;
+      color: $black;
+      text-transform: uppercase;
+    }
   }
   &.error {
-    content: "Tente em alguns minutos.";
-    position: absolute;
-    font-size: 2em;
-    text-align: center;
-    top: 50%;
-    display: inline-block;
-    width: 200px;
-    margin-left: -100px;
-    height: auto;
-    padding-bottom: 10px;
-    left: 50%;
-    color: red;
-    text-transform: uppercase;
-  }
-  &::before {
-    content: "Carregando...";
-    position: absolute;
-    font-size: 2em;
-    text-align: center;
-    top: 50%;
-    display: inline-block;
-    width: 200px;
-    margin-left: -100px;
-    height: auto;
-    padding-bottom: 10px;
-    left: 50%;
-    color: $black;
-    text-transform: uppercase;
+    &::before {
+      content: "Tente em alguns minutos.";
+      position: absolute;
+      font-size: 2em;
+      text-align: center;
+      top: 50%;
+      display: inline-block;
+      width: 200px;
+      margin-left: -100px;
+      height: auto;
+      padding-bottom: 10px;
+      left: 50%;
+      color: red;
+      text-transform: uppercase;
+    }
   }
 }
 
@@ -248,10 +250,10 @@ ul.off-canvas-list {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 900;
   top: 0;
   left: 0;
   overflow-y: auto;
+  // z-index: 900;
 }
 
 %icons {
@@ -274,6 +276,7 @@ ul.off-canvas-list {
 
 .locais-list {
   @extend %list;
+  z-index: 901;
 }
 
 .locais-item {
@@ -314,6 +317,7 @@ ul.off-canvas-list {
 
 .grupos-list {
   @extend %list;
+  z-index: 902;
 }
 
 .grupos-item {

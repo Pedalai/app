@@ -3,13 +3,13 @@ var APP = APP || {};
 APP.Sozinho = {
   setUp: function() {
     var that = this,
-     alone = document.querySelector('a.alone'),
-     groupUl = document.querySelector('#grupos-list');
+     alone = document.querySelector('a.alone');
 
     $(alone).on('click', function(event) {
       event.preventDefault();
       that.getData(); // call request
-      $(groupUl).empty(); //empty ul group
+      $("#grupos-list").empty(); //empty ul group
+      $("#grupos-list").css("z-index", "901" + 1);
     });
   },
 
@@ -20,7 +20,9 @@ APP.Sozinho = {
       url: "proxySozinho.php",
       dataType: "JSON",
       beforeSend: function() {
+        console.log("Carregando Sozinho..");
         body.classList.add('loading');
+        console.log("Carregando 2 Sozinho..");
       },
 
       success: function(locais) {

@@ -3,13 +3,13 @@ var APP = APP || {};
 APP.Groups = {
   setUp: function() {
     var that = this,
-        group = document.querySelector('a.group'),
-        locaisUl = document.querySelector('#locais-list');
+        group = document.querySelector('a.group');
 
     $(group).on('click', function(event) {
       event.preventDefault();
       that.getData(); // call request
-      $(locaisUl).empty(); //empty ul locais
+      $("#locais-list").empty(); //empty ul locais
+      $("#locais-list").css("z-index", "901" + 2);
     });
   },
 
@@ -20,7 +20,9 @@ APP.Groups = {
       url: "proxyGroups.php",
       dataType: "JSON",
       beforeSend: function() {
+        console.log('Carregando Groups...');
         body.classList.add('loading');
+        console.log('Carregando 2 Groups...');
       },
 
       success: function(groups) {
