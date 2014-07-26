@@ -121,6 +121,7 @@ input {
 
 .tab-bar {
   display: inline-block;
+  vertical-align: middle;
   width: 70%;
   margin: 2.5% 0;
   left: 5%;
@@ -188,10 +189,16 @@ ul.off-canvas-list {
 }
 
 .right-small {
-  top: 13%;
-  right: 5%;
-  background: #fff;
-  border: none;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  display: inline-block;
+  vertical-align: top;
+  border-left: solid 1px #1a1a1a;
+  margin-left: 60px;
+  background: #ffffff;
+  margin: 2.5% auto;
+  right: -12%;
+  position: relative;
   a {
     background: url("https://cdn1.iconfinder.com/data/icons/free-mobile-icon-kit/32/Balloon.png") no-repeat center center;
     display: block;
@@ -378,6 +385,23 @@ ul.off-canvas-list {
   background-size: 100%;
 }
 
+// MAPS INFOWINDOW
+.title-info {
+  @include textShadow(0px 0px .2px);
+}
+.distance-info {
+  font-size: .8em;
+  margin: 5px 0;
+}
+.link-info {
+  font-weight: 900;
+  display: block;
+  text-align: center;
+  border-top: 1px solid;
+  padding: 6px 0;
+  background: rgba(0,0,0, .1);
+}
+
 //
 // MEDIA
 //
@@ -387,8 +411,8 @@ ul.off-canvas-list {
   }
 
   #map {
-    top: -27%;
-    height: 110%;
+    top: -41%;
+    height: 140%;
   }
 }
 
