@@ -4,7 +4,9 @@ module.exports = function( grunt ) {
 	// Definição dos arquivos js
 	var filesJS = [
             'src/js/APP.js', 
-            'src/js/APP.Home.js'
+            'src/js/APP.Home.js',
+            'src/js/APP.Sozinho.js',
+            'src/js/APP.Groups.js'
         ];
 
 	// Load all tasks
