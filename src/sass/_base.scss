@@ -1,0 +1,145 @@
+// font
+$base-font-size: 10px;
+
+$font-1: 'Georgia', 'sans-serif';
+
+// images
+$_BASEPATH: '../../src/images/';
+
+// colors
+$color-default: #000;
+$black: #333333;
+
+// mixins
+@mixin transition($rulers...){
+	-webkit-transition: $rulers;
+	   -moz-transition: $rulers;
+	    -ms-transition: $rulers;
+	     -o-transition: $rulers;
+	        transition: $rulers;
+}
+
+@mixin borderRadius($radius) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+	    -ms-border-radius: $radius;
+	     -o-border-radius: $radius;
+	        border-radius: $radius;
+}
+
+@mixin boxShadow($rulers...) {
+	-webkit-box-shadow: $rulers;
+	   -moz-box-shadow: $rulers;
+	    -ms-box-shadow: $rulers;
+	     -o-box-shadow: $rulers;
+	        box-shadow: $rulers;
+}
+
+@mixin textShadow($rulers...) {
+	-webkit-text-shadow: $rulers;
+	   -moz-text-shadow: $rulers;
+	    -ms-text-shadow: $rulers;
+	     -o-text-shadow: $rulers;
+	        text-shadow: $rulers;
+}
+
+@mixin transform($rulers...) {
+	-webkit-transform: $rulers;
+	   -moz-transform: $rulers;
+	    -ms-transform: $rulers;
+	     -o-transform: $rulers;
+	        transform: $rulers;
+}
+
+@mixin animation($rulers...){
+	-webkit-animation: $rulers;
+	   -moz-animation: $rulers;
+	    -ms-animation: $rulers;
+	     -o-animation: $rulers;
+	        animation: $rulers;
+}
+
+@mixin gradient($color-1, $color-2) {
+	background-color: $color-1;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($color-1), to($color-2));
+	background: -webkit-linear-gradient(bottom, $color-1, $color-2);
+	background: -moz-linear-gradient(bottom, $color-1, $color-2);
+	background: -ms-linear-gradient(bottom, $color-1, $color-2);
+	background: -o-linear-gradient(bottom, $color-1, $color-2);
+}
+
+@mixin gradientButton($color-1, $color-2) {
+	background: $color-2; /* Old browsers */
+	background: -moz-linear-gradient(top,  $color-1 10%, $color-2 60%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(10%,$color-1), color-stop(60%,$color-2)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  $color-1 10%,$color-2 60%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  $color-1 10%,$color-2 60%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  $color-1 10%,$color-2 60%); /* IE10+ */
+	background: linear-gradient(to bottom,  $color-1 10%,$color-2 60%); /* W3C */
+	// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3ff89', endColorstr='$color-2',GradientType=0 ); /* IE6-9 */
+
+	&:hover {
+		background: $color-1; /* Old browsers */
+		background: -moz-linear-gradient(top,  $color-2 40%, $color-1 90%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(40%,$color-2), color-stop(90%,$color-1)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  $color-2 40%,$color-1 90%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  $color-2 40%,$color-1 90%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  $color-2 40%,$color-1 90%); /* IE10+ */
+		background: linear-gradient(to bottom,  $color-2 40%,$color-1 90%); /* W3C */
+		// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-2', endColorstr='$color-1',GradientType=0 ); /* IE6-9 */
+		border: 0;
+	}
+}
+
+@mixin placeholder {
+	::-webkit-input-placeholder {
+	   color: lighten($color-default, 50);
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+	   color: lighten($color-default, 50);
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: lighten($color-default, 50);
+	}
+
+	:-ms-input-placeholder {  
+	   color: lighten($color-default, 50);
+	}
+}
+
+@mixin button {
+	// background-color: $color-button;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	text-align: center;
+}
+
+@mixin boxSizing {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	     -o-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+@mixin bgSize {
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+  		 -o-background-size: cover;
+  			background-size: cover;
+}
+
+@mixin vAlign {
+	position: relative;
+	top: 50%;
+	@include transform(translateY(-50%));
+}
+
+// functions
+@function em($target, $context: $base-font-size) {
+   @if $target == 0 { @return 0 }
+   @return $target / $context + 0em;
+}

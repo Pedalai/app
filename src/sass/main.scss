@@ -1,0 +1,15 @@
+// reset
+@import "compass/reset";
+
+// base
+@import "base";
+
+// partials
+// @import "partials/sprite-generator";
+@import "partials/fonts";
+@import "partials/general";
+@import "partials/home";
+
+// components
+@import "components/button";
+@import "components/form";

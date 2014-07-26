@@ -1,0 +1,10 @@
+/* sprite generator */
+@import "compass/utilities/sprites";
+
+$sprite-layout: smart;
+$sprite-spacing: 2px;
+$sprite-sprite-dimensions: true;
+
+@import "sprite/*.png";
+
+@include all-sprite-sprites;
