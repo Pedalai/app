@@ -10,10 +10,12 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaTdjugjXQ2DuUsARrnV8sb1dVoGtIqCI"></script>
 <script src="src/js/APP.js"></script>
 <script src="src/js/APP.Home.js"></script>
+<script src="src/js/APP.Sozinho.js"></script>
 
 <script>
 $(document).foundation();
 APP.iniciar();
+// APP.Sozinho.setUp();
 </script>
 
 </body>

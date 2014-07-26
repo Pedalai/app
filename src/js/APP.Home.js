@@ -82,10 +82,10 @@ APP.Home = {
         console.log("Carregando..");
       },
       success: function(pontos) {
-        var arrCiclo = pontos.features,
+        var arrCiclo = pontos.features, 
             i, c, countFeatures, countCoordinates;
 
-            // var flightPath = new google.maps.Polyline({ //configurações do desenho
+            // flightPath = new google.maps.Polyline({ //configurações do desenho
             //   geodesic: true,
             //   strokeColor: '#333333',
             //   strokeOpacity: 1.0,
@@ -111,8 +111,8 @@ APP.Home = {
         }
 
           // flightPath.setMap(that._map);
-          that.displayRender();
-          that.calcRoute();
+          // that.displayRender();
+          // that.calcRoute();
       },
       error: function() {
         console.log("Error!");
