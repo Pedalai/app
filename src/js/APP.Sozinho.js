@@ -3,13 +3,13 @@ var APP = APP || {};
 APP.Sozinho = {
   setUp: function() {
     var that = this,
-     alone = document.querySelector('a.alone');
+     alone = document.querySelector('a.alone'),
+     section = document.querySelector('#main-section');
 
     $(alone).on('click', function(event) {
       event.preventDefault();
       that.getData(); // call request
-      $("#grupos-list").empty(); //empty ul group
-      $("#grupos-list").css("z-index", "901" + 1);
+      section.innerHTML = " "; //empty section
     });
   },
 
@@ -20,12 +20,13 @@ APP.Sozinho = {
       url: "proxySozinho.php",
       dataType: "JSON",
       beforeSend: function() {
-        console.log("Carregando Sozinho..");
         body.classList.add('loading');
-        console.log("Carregando 2 Sozinho..");
       },
 
       success: function(locais) {
+        body.classList.remove('loading');
+        var ul = document.createElement('ul');
+
         $.each(locais, function(key, local) {
           var local = local,
               id = local.id,
@@ -34,19 +35,22 @@ APP.Sozinho = {
               type = local.type;
 
               // pegando body criando os elementos
-              var ul = document.querySelector('#locais-list'),
+              var section = document.querySelector('#main-section'),
                   li = document.createElement('li'),
                   h5 = document.createElement('h5'),
                   p = document.createElement('p');
                   span = document.createElement('span');
 
               // adicionando classes
+              ul.classList.add('locais-list');
+              ul.id = 'locais-list';
               li.classList.add('locais-item');
               h5.classList.add('locais-nome');
               p.classList.add('locais-distancia');
               span.classList.add('locais-tipo');
 
               // append
+              section.appendChild(ul);
               ul.appendChild(li);
               li.appendChild(h5);
               li.appendChild(p);
