@@ -168,6 +168,7 @@ ul.off-canvas-list {
   li {
     a {
       color: $black;
+      border: none;
     }
 
     label {
@@ -262,6 +263,7 @@ ul.off-canvas-list {
   min-height: 510px;
   position: absolute;
   height: auto;
+  z-index: -999999;
 }
 
 .locais-list {
