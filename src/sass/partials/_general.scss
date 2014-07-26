@@ -1,0 +1,186 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: arial, sans-serif;
+	font-size: 62.5%;
+}
+
+a {
+	text-decoration: none;
+}
+
+input {
+	border: none;
+}
+
+.center {
+	margin: 0 auto;
+	width: 990px;
+}
+
+%title {
+  text-transform: uppercase;
+  padding: 20px 10px;
+}
+
+.canvas-title {
+  @extend %title;
+  font-size: 1.8em !important;
+}
+
+.canvas-list {
+  @extend %title;
+  border-bottom: 1px solid #262626;
+  a {
+    padding-bottom: 20px;
+    padding-left: 50px !important;
+    font-size: 2em;
+    border: none !important;
+    position: relative;
+    &.alone {
+      &::before {
+        content: "";
+        background: transparent url("https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male-32.png") no-repeat center center;
+      }
+    }
+    &.group {
+      &::before {
+        content: "";
+        background: transparent url("https://cdn2.iconfinder.com/data/icons/pittogrammi/142/88-32.png") no-repeat center center;
+      }
+    }
+    &::before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      position: absolute;
+      left: 10px;
+      top: 5px;
+    }
+  }
+}
+
+.legend-list {
+  // height: 170px;
+  max-height: 330px;
+  overflow-y: auto;
+}
+
+.legend-item {
+  background: blue;
+  padding: 10px 20px 10px 30px;
+  font-size: 1.2em;
+  color: $black;
+  background-color: #fff;
+  position: relative;
+  &::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: $black !important;
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+  }
+}
+
+.tab-bar {
+  display: inline-block;
+  width: 70%;
+  margin-top: 5%;
+  left: 5%;
+  background: #ffffff;
+  border: 1px solid $black;
+  .menu-icon {
+    span {
+      &::after {
+        content: "";
+        box-shadow: 0 0px 0 1px $black, 0 7px 0 1px $black, 0 14px 0 1px $black;
+      }
+    }
+  }
+
+  h1 {
+    color: $black !important;
+  }
+}
+
+
+.title-primary {
+  text-transform: uppercase;
+  position: relative;
+  font-size: 1.2em !important;
+  left: 3px !important;
+  color: $black;
+}
+
+label.canvas-title {
+  padding: 20px !important;
+  font-size: 2em;
+  span {
+    text-transform: lowercase;
+    background: #ffffff !important;
+    display: inline-block !important;
+    margin-left: 15px;
+    font-size: .2em;
+    vertical-align: middle;
+  }
+}
+
+.left-off-canvas-menu {
+  height: 870%;
+  padding-bottom: 20px;
+  background: #ffffff;
+}
+
+ul.off-canvas-list {
+  li {
+    a {
+      color: $black;
+    }
+
+    label {
+      color: $black;
+      background-color: #fff;
+      border-top: 1px solid $black;
+      border-bottom: 1px solid $black;
+    }
+  }
+}
+
+.right-small {
+  top: 25%;
+  right: 5%;
+  background: #fff;
+  border: none;
+  a {
+    background: url("https://cdn1.iconfinder.com/data/icons/free-mobile-icon-kit/32/Balloon.png") no-repeat center center;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $black;
+  }
+}
+
+
+// MAP
+
+#map {
+  width: 100%;
+  height: 100%;
+  z-index: -99999;
+  top: -11%;
+}
+
+.off-canvas-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000000;
+  background: rgba(255, 255, 255, .4);
+}
