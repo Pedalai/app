@@ -1,10 +1,10 @@
 <?php
 $config = array(
   "nome"    =>"PEDAL AÍ",
-  "host"     =>"pianolab.com.br",
-  "user"     =>"prog1_rayann",
-  "senha"    =>"rayannrag1",
-  "db"       =>"prog1_pedalai",
+  "host"     =>"localhost",
+  "user"     =>"root",
+  "senha"    =>"root",
+  "db"       =>"pedalai",
   "banco"    =>"mysql"
 );
 

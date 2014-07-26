@@ -1,5 +1,4 @@
 <?php
-// http://prog1.studio.pianolab.com.br/pedalai/bike_way_parks.php/index?latitudeFrom=-8.0390280&longitudeFrom=-34.8707380
 /*
 * Calculates the great-circle distance between two points, with
 * the Vincenty formula.
