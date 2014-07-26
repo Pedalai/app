@@ -1,4 +1,4 @@
-/* line 17, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,45 +20,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -336,14 +336,15 @@ ul.off-canvas-list li label {
   min-height: 510px;
   position: absolute;
   height: auto;
+  z-index: -99999;
 }
 
-/* line 267, ../sass/partials/_general.scss */
+/* line 268, ../sass/partials/_general.scss */
 .locais-list {
   z-index: 901;
 }
 
-/* line 284, ../sass/partials/_general.scss */
+/* line 285, ../sass/partials/_general.scss */
 .locais-tipo {
   display: block;
   margin-top: 10px;
@@ -352,57 +353,57 @@ ul.off-canvas-list li label {
   padding: 2px;
 }
 
-/* line 293, ../sass/partials/_general.scss */
+/* line 294, ../sass/partials/_general.scss */
 .rota {
   background: pink;
 }
 
-/* line 294, ../sass/partials/_general.scss */
+/* line 295, ../sass/partials/_general.scss */
 .praca {
   background: gray;
 }
 
-/* line 295, ../sass/partials/_general.scss */
+/* line 296, ../sass/partials/_general.scss */
 .parque {
   background: red;
 }
 
-/* line 296, ../sass/partials/_general.scss */
+/* line 297, ../sass/partials/_general.scss */
 .ciclovia {
   background: orange;
 }
 
-/* line 297, ../sass/partials/_general.scss */
+/* line 298, ../sass/partials/_general.scss */
 .ciclofaixa {
   background: green;
 }
 
-/* line 298, ../sass/partials/_general.scss */
+/* line 299, ../sass/partials/_general.scss */
 .ciclofaixa-movel {
   background: blue;
 }
 
-/* line 304, ../sass/partials/_general.scss */
+/* line 305, ../sass/partials/_general.scss */
 .starter {
   color: green;
 }
 
-/* line 305, ../sass/partials/_general.scss */
+/* line 306, ../sass/partials/_general.scss */
 .advanced {
   color: purple;
 }
 
-/* line 306, ../sass/partials/_general.scss */
+/* line 307, ../sass/partials/_general.scss */
 .intermediate {
   color: red;
 }
 
-/* line 308, ../sass/partials/_general.scss */
+/* line 309, ../sass/partials/_general.scss */
 .grupos-list {
   z-index: 902;
 }
 
-/* line 321, ../sass/partials/_general.scss */
+/* line 322, ../sass/partials/_general.scss */
 .grupos-level {
   display: inline-block;
   margin: 10px 0 5px 0;
@@ -412,27 +413,27 @@ ul.off-canvas-list li label {
   vertical-align: top;
 }
 
-/* line 330, ../sass/partials/_general.scss */
+/* line 331, ../sass/partials/_general.scss */
 .grupos-preco {
   padding: 2px;
   display: inline-block;
   margin: 0 10px;
 }
 
-/* line 336, ../sass/partials/_general.scss */
+/* line 337, ../sass/partials/_general.scss */
 .grupos-apoio {
   padding: 2px;
   display: inline-block;
 }
 
-/* line 346, ../sass/partials/_general.scss */
+/* line 347, ../sass/partials/_general.scss */
 .paid {
   right: 50px;
   background: url("https://cdn1.iconfinder.com/data/icons/dot/64/usd_dollar_money_cash.png");
   background-size: 100%;
 }
 
-/* line 354, ../sass/partials/_general.scss */
+/* line 355, ../sass/partials/_general.scss */
 .yes-apoio {
   right: 15px;
   background: url("https://cdn2.iconfinder.com/data/icons/pittogrammi/142/13-64.png");
