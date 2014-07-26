@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 26-Jul-2014 às 02:21
+-- Generation Time: 26-Jul-2014 às 02:52
 -- Versão do servidor: 5.1.73-cll
 -- PHP Version: 5.4.23
 
@@ -41,12 +41,12 @@ CREATE TABLE IF NOT EXISTS `groups` (
 
 INSERT INTO `groups` (`id`, `name`, `price`, `car`, `level`, `schedule`, `description`, `lat`, `lon`, `created`, `modified`) VALUES
 (999, 'Pedal Amigo', '1', 1, 'starter', 'Todas sextas as 21:30 no antigo quartel de olinda', 'passeio ciclistico grátis', '-7.9907140', '-34.8416220', '2014-07-25 00:00:00', '2014-07-25 00:00:00'),
-(1000, 'CicloMangue', '0', 0, 'intemediate', 'Todos domingos as 17 hrs na via mangue. ', 'Concentracão no início da via, sentido boa viagem.', '-8.1262710', '-34.9037930', '2014-07-25 00:00:00', '2014-07-25 00:00:00'),
+(1000, 'CicloMangue', '0', 0, 'intermediate', 'Todos domingos as 17 hrs na via mangue. ', 'Concentracão no início da via, sentido boa viagem.', '-8.1262710', '-34.9037930', '2014-07-25 00:00:00', '2014-07-25 00:00:00'),
 (1001, 'Pedalando com tatu', '1', 1, 'advanced', 'todos os dias', 'locais a definir', '-7.9344220', '-34.8687210', NULL, NULL),
 (1002, 'Ciclistas de cristo', '0', 1, 'starter', 'toda segunda as 20 hrs na igreja do carmo', 'Deus seja louvado', '-8.0171150', '-34.8500000', NULL, NULL),
 (1003, 'Bicicletada Recife', '0', 0, 'intermediate', 'Toda última sexta feira de cada mês', 'As 23 hrs na praça do derby', '-8.0561980', '-34.8996560', NULL, NULL),
 (1004, 'Pedal Amigo', '1', 1, 'starter', 'Todas sextas as 21:30 no antigo quartel de olinda', 'passeio ciclistico grátis', '-8.0603622', '-34.9055354', '2014-07-25 00:00:00', '2014-07-25 00:00:00'),
-(1005, 'CicloMangue', '0', 0, 'intemediate', 'Todos domingos as 17 hrs na via mangue. ', 'Concentracão no início da via, sentido boa viagem.', '-8.0566654', '-34.8863952', '2014-07-25 00:00:00', '2014-07-25 00:00:00'),
+(1005, 'CicloMangue', '0', 0, 'intermediate', 'Todos domingos as 17 hrs na via mangue. ', 'Concentracão no início da via, sentido boa viagem.', '-8.0566654', '-34.8863952', '2014-07-25 00:00:00', '2014-07-25 00:00:00'),
 (1006, 'Pedalando com tatu', '1', 1, 'advanced', 'todos os dias', 'locais a definir', '-8.0474021', '-34.8954932', NULL, NULL),
 (1007, 'Ciclistas de cristo', '0', 1, 'starter', 'toda segunda as 20 hrs na igreja do carmo', 'Deus seja louvado', '-8.0535210', '-34.8881118', NULL, NULL),
 (1008, 'Bicicletada Recife', '0', 0, 'intermediate', 'Toda última sexta feira de cada mês', 'As 23 hrs na praça do derby', '-8.0390734', '-34.8850648', NULL, NULL);
