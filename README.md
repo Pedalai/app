@@ -1,4 +1,4 @@
-## Pedalaí
+# Pedalaí
 
 Projeto criado no Hackaton da [Campus Party 2014]( http://recife.campus-party.org/2014/index.html "Link da CPRecife") com o intúito de facilitar e incentivar os ciclistas a pedalarem em grupo ou individualmente, e conhecer pontos da cidade próximo a ele onde se pode pedalar.
 
