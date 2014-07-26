@@ -1,4 +1,4 @@
-/* line 17, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,45 +20,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -199,28 +199,29 @@ input {
 /* line 122, ../sass/partials/_general.scss */
 .tab-bar {
   display: inline-block;
+  vertical-align: middle;
   width: 70%;
   margin: 2.5% 0;
   left: 5%;
   background: #ffffff;
   border: 1px solid #fff;
 }
-/* line 131, ../sass/partials/_general.scss */
+/* line 132, ../sass/partials/_general.scss */
 .tab-bar .menu-icon span::after {
   content: "";
   box-shadow: 0 0px 0 1px #333333, 0 7px 0 1px #333333, 0 14px 0 1px #333333;
 }
-/* line 138, ../sass/partials/_general.scss */
+/* line 139, ../sass/partials/_general.scss */
 .tab-bar h1 {
   color: #333333 !important;
 }
 
-/* line 143, ../sass/partials/_general.scss */
+/* line 144, ../sass/partials/_general.scss */
 .left-small {
   border-color: #dedede;
 }
 
-/* line 147, ../sass/partials/_general.scss */
+/* line 148, ../sass/partials/_general.scss */
 .title-primary {
   text-transform: uppercase;
   position: relative;
@@ -229,12 +230,12 @@ input {
   color: #333333;
 }
 
-/* line 155, ../sass/partials/_general.scss */
+/* line 156, ../sass/partials/_general.scss */
 label.canvas-title {
   padding: 20px !important;
   font-size: 2em;
 }
-/* line 158, ../sass/partials/_general.scss */
+/* line 159, ../sass/partials/_general.scss */
 label.canvas-title span {
   text-transform: lowercase;
   background: #ffffff !important;
@@ -244,19 +245,19 @@ label.canvas-title span {
   vertical-align: middle;
 }
 
-/* line 168, ../sass/partials/_general.scss */
+/* line 169, ../sass/partials/_general.scss */
 .left-off-canvas-menu {
   height: 870%;
   padding-bottom: 20px;
   background: #ffffff;
 }
 
-/* line 176, ../sass/partials/_general.scss */
+/* line 177, ../sass/partials/_general.scss */
 ul.off-canvas-list li a {
   color: #333333;
   border: none;
 }
-/* line 181, ../sass/partials/_general.scss */
+/* line 182, ../sass/partials/_general.scss */
 ul.off-canvas-list li label {
   color: #333333;
   background-color: #fff;
@@ -264,14 +265,20 @@ ul.off-canvas-list li label {
   border-bottom: 1px solid #333333;
 }
 
-/* line 190, ../sass/partials/_general.scss */
+/* line 191, ../sass/partials/_general.scss */
 .right-small {
-  top: 13%;
-  right: 5%;
-  background: #fff;
-  border: none;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  display: inline-block;
+  vertical-align: top;
+  border-left: solid 1px #1a1a1a;
+  margin-left: 60px;
+  background: #ffffff;
+  margin: 2.5% auto;
+  right: -12%;
+  position: relative;
 }
-/* line 195, ../sass/partials/_general.scss */
+/* line 202, ../sass/partials/_general.scss */
 .right-small a {
   background: url("https://cdn1.iconfinder.com/data/icons/free-mobile-icon-kit/32/Balloon.png") no-repeat center center;
   display: block;
@@ -280,7 +287,7 @@ ul.off-canvas-list li label {
   border: 1px solid #fff;
 }
 
-/* line 207, ../sass/partials/_general.scss */
+/* line 214, ../sass/partials/_general.scss */
 #map {
   width: 100%;
   height: 100%;
@@ -288,7 +295,7 @@ ul.off-canvas-list li label {
   top: -13.1%;
 }
 
-/* line 214, ../sass/partials/_general.scss */
+/* line 221, ../sass/partials/_general.scss */
 .off-canvas-wrap {
   position: absolute;
   top: 0;
@@ -299,7 +306,7 @@ ul.off-canvas-list li label {
   background: rgba(255, 255, 255, 0.4);
 }
 
-/* line 226, ../sass/partials/_general.scss */
+/* line 233, ../sass/partials/_general.scss */
 .locais-item, .grupos-item {
   padding: 20px;
   background: #ffffff;
@@ -307,7 +314,7 @@ ul.off-canvas-list li label {
   position: relative;
 }
 
-/* line 233, ../sass/partials/_general.scss */
+/* line 240, ../sass/partials/_general.scss */
 .locais-nome, .grupos-nome {
   line-height: 1.2em;
   font-size: 1.2em;
@@ -315,7 +322,7 @@ ul.off-canvas-list li label {
   text-transform: uppercase;
 }
 
-/* line 240, ../sass/partials/_general.scss */
+/* line 247, ../sass/partials/_general.scss */
 .locais-distancia, .grupos-distancia {
   color: rgba(0, 0, 0, 0.4);
   display: block;
@@ -323,7 +330,7 @@ ul.off-canvas-list li label {
   font-size: 1.2em;
 }
 
-/* line 247, ../sass/partials/_general.scss */
+/* line 254, ../sass/partials/_general.scss */
 .locais-list, .grupos-list {
   position: absolute;
   width: 100%;
@@ -333,7 +340,7 @@ ul.off-canvas-list li label {
   overflow-y: auto;
 }
 
-/* line 257, ../sass/partials/_general.scss */
+/* line 264, ../sass/partials/_general.scss */
 .paid, .yes-apoio {
   width: 32px;
   height: 32px;
@@ -341,7 +348,7 @@ ul.off-canvas-list li label {
   position: absolute;
 }
 
-/* line 268, ../sass/partials/_general.scss */
+/* line 275, ../sass/partials/_general.scss */
 .main-section {
   width: 100%;
   min-height: 510px;
@@ -350,12 +357,12 @@ ul.off-canvas-list li label {
   z-index: -999999;
 }
 
-/* line 276, ../sass/partials/_general.scss */
+/* line 283, ../sass/partials/_general.scss */
 .locais-list {
   z-index: 901;
 }
 
-/* line 293, ../sass/partials/_general.scss */
+/* line 300, ../sass/partials/_general.scss */
 .locais-tipo {
   display: block;
   margin-top: 10px;
@@ -364,7 +371,7 @@ ul.off-canvas-list li label {
   padding: 2px;
   position: relative;
 }
-/* line 300, ../sass/partials/_general.scss */
+/* line 307, ../sass/partials/_general.scss */
 .locais-tipo::before {
   content: "";
   width: 20px;
@@ -376,57 +383,57 @@ ul.off-canvas-list li label {
   background-size: 100%;
 }
 
-/* line 313, ../sass/partials/_general.scss */
+/* line 320, ../sass/partials/_general.scss */
 .rota {
   color: pink;
 }
 
-/* line 314, ../sass/partials/_general.scss */
+/* line 321, ../sass/partials/_general.scss */
 .praca {
   color: gray;
 }
 
-/* line 315, ../sass/partials/_general.scss */
+/* line 322, ../sass/partials/_general.scss */
 .parque {
   color: red;
 }
 
-/* line 316, ../sass/partials/_general.scss */
+/* line 323, ../sass/partials/_general.scss */
 .ciclovia {
   color: orange;
 }
 
-/* line 317, ../sass/partials/_general.scss */
+/* line 324, ../sass/partials/_general.scss */
 .ciclofaixa {
   color: green;
 }
 
-/* line 318, ../sass/partials/_general.scss */
+/* line 325, ../sass/partials/_general.scss */
 .ciclofaixa-movel {
   color: blue;
 }
 
-/* line 324, ../sass/partials/_general.scss */
+/* line 331, ../sass/partials/_general.scss */
 .starter {
   color: green;
 }
 
-/* line 325, ../sass/partials/_general.scss */
+/* line 332, ../sass/partials/_general.scss */
 .advanced {
   color: purple;
 }
 
-/* line 326, ../sass/partials/_general.scss */
+/* line 333, ../sass/partials/_general.scss */
 .intermediate {
   color: red;
 }
 
-/* line 328, ../sass/partials/_general.scss */
+/* line 335, ../sass/partials/_general.scss */
 .grupos-list {
   z-index: 902;
 }
 
-/* line 341, ../sass/partials/_general.scss */
+/* line 348, ../sass/partials/_general.scss */
 .grupos-level {
   display: inline-block;
   margin: 10px 0 5px 0;
@@ -436,42 +443,67 @@ ul.off-canvas-list li label {
   vertical-align: top;
 }
 
-/* line 350, ../sass/partials/_general.scss */
+/* line 357, ../sass/partials/_general.scss */
 .grupos-preco {
   padding: 2px;
   display: inline-block;
   margin: 0 10px;
 }
 
-/* line 356, ../sass/partials/_general.scss */
+/* line 363, ../sass/partials/_general.scss */
 .grupos-apoio {
   padding: 2px;
   display: inline-block;
 }
 
-/* line 366, ../sass/partials/_general.scss */
+/* line 373, ../sass/partials/_general.scss */
 .paid {
   right: 50px;
   background: url("https://cdn1.iconfinder.com/data/icons/dot/64/usd_dollar_money_cash.png");
   background-size: 100%;
 }
 
-/* line 374, ../sass/partials/_general.scss */
+/* line 381, ../sass/partials/_general.scss */
 .yes-apoio {
   right: 15px;
   background: url("https://cdn2.iconfinder.com/data/icons/pittogrammi/142/13-64.png");
   background-size: 100%;
 }
 
+/* line 389, ../sass/partials/_general.scss */
+.title-info {
+  -webkit-text-shadow: 0px 0px 0.2px;
+  -moz-text-shadow: 0px 0px 0.2px;
+  -ms-text-shadow: 0px 0px 0.2px;
+  -o-text-shadow: 0px 0px 0.2px;
+  text-shadow: 0px 0px 0.2px;
+}
+
+/* line 392, ../sass/partials/_general.scss */
+.distance-info {
+  font-size: .8em;
+  margin: 5px 0;
+}
+
+/* line 396, ../sass/partials/_general.scss */
+.link-info {
+  font-weight: 900;
+  display: block;
+  text-align: center;
+  border-top: 1px solid;
+  padding: 6px 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
 @media only screen and (min-width: 1024px) {
-  /* line 378, ../sass/partials/_general.scss */
+  /* line 409, ../sass/partials/_general.scss */
   .right-small {
     top: 57%;
   }
 
-  /* line 382, ../sass/partials/_general.scss */
+  /* line 413, ../sass/partials/_general.scss */
   #map {
-    top: -27%;
-    height: 110%;
+    top: -41%;
+    height: 140%;
   }
 }
