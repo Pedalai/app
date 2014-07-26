@@ -128,6 +128,12 @@ APP.Home = {
 
             PathStyle.setMap(that._map);
 
+            var marcadorPersonalizado = new google.maps.Marker({
+              position: myLatlng,
+              map: that._map,
+              // icon: image,
+            });
+
             var infowindow = new google.maps.InfoWindow({
                 content: '<h1 class="title-info">' + value.name + '</h1>' + 
                         '<h2 class="distance-info">' + value.distance + ' km de distância</h2>' + 
