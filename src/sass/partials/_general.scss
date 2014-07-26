@@ -371,6 +371,19 @@ ul.off-canvas-list {
   background-size: 100%;
 }
 
+//
+// MEDIA
+//
+@media only screen and (min-width : 1024px) {
+  .right-small {
+    top: 57%;
+  }
+
+  #map {
+    top: -27%;
+    height: 110%;
+  }
+}
 
 
 

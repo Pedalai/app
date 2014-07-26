@@ -452,3 +452,16 @@ ul.off-canvas-list li label {
   background: url("https://cdn2.iconfinder.com/data/icons/pittogrammi/142/13-64.png");
   background-size: 100%;
 }
+
+@media only screen and (min-width: 1024px) {
+  /* line 378, ../sass/partials/_general.scss */
+  .right-small {
+    top: 57%;
+  }
+
+  /* line 382, ../sass/partials/_general.scss */
+  #map {
+    top: -27%;
+    height: 110%;
+  }
+}
