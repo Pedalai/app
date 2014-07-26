@@ -2,3 +2,8 @@
 /index.php
 /sftp-config.json
 /.DS_Store
+node_modules/*
+.sass-cache/*
+.git
+/nbproject/private/
+arquivos/*
