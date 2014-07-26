@@ -115,7 +115,7 @@ module.exports = function( grunt ) {
 
 	// registrando tarefa default
 	// grunt.registerTask( 'default', [ 'browserSync', 'watch' ] );
-  grunt.registerTask( 'default', [ 'watch' ] );
+  grunt.registerTask( 'default', [ 'browserSync', 'watch' ] );
 	grunt.registerTask( 'img', [ 'imagemin' ] );
 	grunt.registerTask( 'src', [ 'compass:src', 'concat:js', 'concat:css' ] );
 	grunt.registerTask( 'dist', [ 'compass:dist', 'uglify:dist', 'concat:css', 'imagemin' ] );

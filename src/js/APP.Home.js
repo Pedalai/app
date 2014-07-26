@@ -79,7 +79,10 @@ APP.Home = {
     url: 'proxy.php',
     dataType: 'JSON',
       beforeSend: function() {
-        console.log("Carregando..");
+        console.log("Carregando...");
+      },
+      complete: function(){
+        console.log("Carregou!!!");
       },
       success: function(pontos) {
         var arrCiclo = pontos.features,
@@ -102,31 +105,38 @@ APP.Home = {
               "#e37906"
           ];
 
-        for (i = 0, countFeatures = arrCiclo.length; i < countFeatures; i = i+1) {
-          var objCiclo = arrCiclo[i],
-              coordinates = objCiclo.geometry.coordinates;
+          for (i = 0, countFeatures = arrCiclo.length; i < countFeatures; i = i+1) {
+            var objCiclo = arrCiclo[i],
+            coordinates = objCiclo.geometry.coordinates;
 
-          var DrivePath = [];
+            var DrivePath = [];
 
-          for (c = 0, countCoordinates = coordinates.length; c < countCoordinates; c = c+1) {
-            var coordinate = coordinates[c],
-                latitude = coordinate[1],
-                longitude = coordinate[0];
+            for (c = 0, countCoordinates = coordinates.length; c < countCoordinates; c = c+1) {
+              var coordinate = coordinates[c],
+              latitude = coordinate[1],
+              longitude = coordinate[0];
 
-                DrivePath.push(new google.maps.LatLng(latitude, longitude));
-          }
+              DrivePath.push(new google.maps.LatLng(latitude, longitude));
+            }
 
             var PathStyle = new google.maps.Polyline({
-                path: DrivePath,
-                strokeColor: colors[i],
-                strokeOpacity: 1.0,
-                strokeWeight: 2,
-                map: that._map
-              });
+              path: DrivePath,
+              strokeColor: colors[i],
+              strokeOpacity: 1.0,
+              strokeWeight: 2,
+              map: that._map,
+              id: objCiclo.id
+            });
 
             PathStyle.setMap(that._map);
 
-        }
+            var infowindow = new google.maps.InfoWindow({
+                content: "info"
+            });
+            infowindow.setPosition(new google.maps.LatLng(DrivePath[0].k, DrivePath[0].B));
+            infowindow.open(that._map);
+
+          }
       },
       error: function() {
         console.log("Error!");
