@@ -32,7 +32,7 @@ APP.Home = {
 
       // Parâmetros do mapa
       var mapOptions = {
-        zoom: 13,
+        zoom: 12,
         center: myLatlng,
         panControl: false,
         scrollwheel: false,
@@ -83,81 +83,54 @@ APP.Home = {
       },
       success: function(pontos) {
         var arrCiclo = pontos.features,
-            i, c, countFeatures, countCoordinates;
+            i, c, countFeatures, countCoordinates,
 
-            // var flightPath = new google.maps.Polyline({ //configurações do desenho
-            //   geodesic: true,
-            //   strokeColor: '#333333',
-            //   strokeOpacity: 1.0,
-            //   strokeWeight: 2
-            // }),
-
-            // pontos = [];
-
-        that._directionsService = new google.maps.DirectionsService();
+            colors = [
+              "#FF0000", 
+              "#00FF00", 
+              "#0000FF", 
+              "#FFFFFF", 
+              "#000000", 
+              "#FFFF00", 
+              "#00FFFF", 
+              "#FF00FF",
+              "#00ff84",
+              "#0000ff",
+              "#ffd200",
+              "#9600ff",
+              "#06e3cc",
+              "#e37906"
+          ];
 
         for (i = 0, countFeatures = arrCiclo.length; i < countFeatures; i = i+1) {
           var objCiclo = arrCiclo[i],
               coordinates = objCiclo.geometry.coordinates;
 
-              for (c = 0, countCoordinates = coordinates.length; c < countCoordinates; c = c+1) {
-                var coordinate = coordinates[c],
-                    latitude = coordinate[1],
-                    longitude = coordinate[0];
+          var DrivePath = [];
 
-                    // pontos.push(new google.maps.LatLng(latitude, longitude));
-              }
+          for (c = 0, countCoordinates = coordinates.length; c < countCoordinates; c = c+1) {
+            var coordinate = coordinates[c],
+                latitude = coordinate[1],
+                longitude = coordinate[0];
+
+                DrivePath.push(new google.maps.LatLng(latitude, longitude));
+          }
+
+            var PathStyle = new google.maps.Polyline({
+                path: DrivePath,
+                strokeColor: colors[i],
+                strokeOpacity: 1.0,
+                strokeWeight: 2,
+                map: that._map
+              });
+
+            PathStyle.setMap(that._map);
 
         }
-
-          // flightPath.setMap(that._map);
-          that.displayRender();
-          that.calcRoute();
       },
       error: function() {
         console.log("Error!");
       }
-    });
-  },
-
-  displayRender: function() {
-    that = this;
-    that._directionsDisplay = new google.maps.DirectionsRenderer();
-    that._directionsDisplay.setMap(that._map);
-  },
-
-  calcRoute: function() {
-    var that = this;
-
-    var start = that.convertToString({
-      lat: -8.09554,
-      lng: -34.91687
-    });
-
-    var end = that.convertToString({
-      lat: -8.09429,
-      lng: -34.91655
-    });
-
-    console.log("Console: " + start, end);
-
-    var request = {
-      origin:start,
-      destination: end,
-      travelMode: google.maps.TravelMode.BICYCLING
-    };
-
-    that._directionsService.route(request, function(result, status) {
-      if (status == google.maps.DirectionsStatus.OK) {
-        that._directionsDisplay.setDirections(result);
-      }
-    });
-  },
-
-  convertToString: function(latlng){
-    var geocoder = new google.maps.Geocoder();
-    geocoder.geocode({'latLng': latlng}, function(results, status) {
-      return results;
     });
   }
 }
