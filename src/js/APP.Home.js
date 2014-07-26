@@ -105,66 +105,68 @@ APP.Home = {
               "#e37906"
           ];
 
-          $.each(arrCiclo, function(idx, value){
-            var DrivePath = [],
-              coordinates = value.geometry;
+          setTimeout(function(){
+              $.each(arrCiclo, function(idx, value){
+                var DrivePath = [],
+                  coordinates = value.geometry;
 
-            for (c = 0, countCoordinates = coordinates.length; c < countCoordinates; c = c+1) {
-              var coordinate = coordinates[c],
-              latitude = coordinate[1],
-              longitude = coordinate[0];
+                for (c = 0, countCoordinates = coordinates.length; c < countCoordinates; c = c+1) {
+                  var coordinate = coordinates[c],
+                  latitude = coordinate[1],
+                  longitude = coordinate[0];
 
-              DrivePath.push(new google.maps.LatLng(latitude, longitude));
-            }
+                  DrivePath.push(new google.maps.LatLng(latitude, longitude));
+                }
 
-            var PathStyle = new google.maps.Polyline({
-              path: DrivePath,
-              strokeColor: colors[i],
-              strokeOpacity: 1.0,
-              strokeWeight: 2,
-              map: that._map,
-              id: value.id
-            });
+                var PathStyle = new google.maps.Polyline({
+                  path: DrivePath,
+                  strokeColor: colors[i],
+                  strokeOpacity: 1.0,
+                  strokeWeight: 2,
+                  map: that._map,
+                  id: value.id
+                });
 
-            PathStyle.setMap(that._map);
+                PathStyle.setMap(that._map);
 
-            var marcadorPersonalizado = new google.maps.Marker({
-              position: new google.maps.LatLng(DrivePath[0].k, DrivePath[0].B),
-              map: that._map
-              // icon: image,
-            });
+                var marcadorPersonalizado = new google.maps.Marker({
+                  position: new google.maps.LatLng(DrivePath[0].k, DrivePath[0].B),
+                  map: that._map
+                  // icon: image,
+                });
 
-            // var infowindow = new google.maps.InfoWindow({
-            //     content: '<h1 class="title-info">' + value.name + '</h1>' + 
-            //             '<h2 class="distance-info">' + value.distance + ' km de distância</h2>' + 
-            //             '<a class="link-info">Pedalar até aqui</a>',
-            //     id: value.id,
-            //     maxWidth: 170
-            // });
-            
-            // infowindow.setPosition(new google.maps.LatLng(DrivePath[0].k, DrivePath[0].B));
-            // infowindow.open(that._map);
-
-            var infowindow = new google.maps.InfoWindow();
-
-            google.maps.event.addListener(marcadorPersonalizado, 'click', (function(marcadorPersonalizado, i) {
-              
-              return function() {
-                infowindow.setContent(
-
-                  '<h1 class="title-info">' + value.name + '</h1>' + 
-                        '<h2 class="distance-info">' + value.distance + ' km de distância</h2>' + 
-                        '<a class="link-info">Pedalar até aqui</a>'
-                  
-                );
+                // var infowindow = new google.maps.InfoWindow({
+                //     content: '<h1 class="title-info">' + value.name + '</h1>' + 
+                //             '<h2 class="distance-info">' + value.distance + ' km de distância</h2>' + 
+                //             '<a class="link-info">Pedalar até aqui</a>',
+                //     id: value.id,
+                //     maxWidth: 170
+                // });
                 
-                infowindow.open(that._map, marcadorPersonalizado);
-              }
+                // infowindow.setPosition(new google.maps.LatLng(DrivePath[0].k, DrivePath[0].B));
+                // infowindow.open(that._map);
 
-          })(marcadorPersonalizado));
+                var infowindow = new google.maps.InfoWindow();
 
-            i++;
-          });
+                google.maps.event.addListener(marcadorPersonalizado, 'click', (function(marcadorPersonalizado, i) {
+                  
+                  return function() {
+                    infowindow.setContent(
+
+                      '<h1 class="title-info">' + value.name + '</h1>' + 
+                            '<h2 class="distance-info">' + value.distance + ' km de distância</h2>' + 
+                            '<a class="link-info">Pedalar até aqui</a>'
+                      
+                    );
+                    
+                    infowindow.open(that._map, marcadorPersonalizado);
+                  }
+
+              })(marcadorPersonalizado));
+
+                i++;
+              });
+    }, 500);
 
           // for (i = 0, countFeatures = arrCiclo.length; i < countFeatures; i = i+1) {
           //   var objCiclo = arrCiclo[i],
