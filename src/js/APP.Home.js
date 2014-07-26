@@ -51,7 +51,7 @@ APP.Home = {
       that._map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
       // Marcador personalizado;
-      var image = 'https://cdn4.iconfinder.com/data/icons/miu/22/map_location_pin_map-marker_-32.png';
+      var image = 'http://google-maps-icons.googlecode.com/files/cycling.png';
       var marcadorPersonalizado = new google.maps.Marker({
         position: myLatlng,
         map: that._map,
