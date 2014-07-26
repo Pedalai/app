@@ -10,6 +10,7 @@ APP.Groups = {
       event.preventDefault();
       that.getData(); // call request
       section.innerHTML = " "; //empty section
+      section.style.zIndex = "1";
     });
   },
 

@@ -32,20 +32,7 @@
 	        <li class="canvas-list"><a class="group" href="#">Em Grupo</a></li>
 	      </ul>
 
-	      <ul class="legend-list">
-	      	<li class="legend-item">Minha Legenda 1</li>
-	      	<li class="legend-item">Minha Legenda 2</li>
-	      	<li class="legend-item">Minha Legenda 3</li>
-	      	<li class="legend-item">Minha Legenda 4</li>
-	      	<li class="legend-item">Minha Legenda 5</li>
-	      	<li class="legend-item">Minha Legenda 6</li>
-	      	<li class="legend-item">Minha Legenda 7</li>
-	      	<li class="legend-item">Minha Legenda 8</li>
-	      	<li class="legend-item">Minha Legenda 9</li>
-	      	<li class="legend-item">Minha Legenda 10</li>
-	      	<li class="legend-item">Minha Legenda 11</li>
-	      	<li class="legend-item">Minha Legenda 12</li>
-	      </ul>
+	     	<?php include('inc/legends.php') ?>
 	    </aside>
 
 	    <section id="main-section" class="main-section">
