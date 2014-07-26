@@ -1,4 +1,4 @@
-/* line 17, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,45 +20,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../Users/thulioph/.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -352,59 +352,71 @@ ul.off-canvas-list li label {
   text-transform: capitalize;
   font-size: 1.2em;
   padding: 2px;
+  position: relative;
 }
-
-/* line 295, ../sass/partials/_general.scss */
-.rota {
-  background: pink;
-}
-
-/* line 296, ../sass/partials/_general.scss */
-.praca {
-  background: gray;
-}
-
-/* line 297, ../sass/partials/_general.scss */
-.parque {
-  background: red;
-}
-
-/* line 298, ../sass/partials/_general.scss */
-.ciclovia {
-  background: orange;
-}
-
-/* line 299, ../sass/partials/_general.scss */
-.ciclofaixa {
-  background: green;
-}
-
-/* line 300, ../sass/partials/_general.scss */
-.ciclofaixa-movel {
-  background: blue;
+/* line 293, ../sass/partials/_general.scss */
+.locais-tipo::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  background: url("http://icons.iconarchive.com/icons/visualpharm/icons8-metro-style/512/Plants-Trees-Deciduous-tree-icon.png") no-repeat;
+  background-size: 100%;
 }
 
 /* line 306, ../sass/partials/_general.scss */
+.rota {
+  color: pink;
+}
+
+/* line 307, ../sass/partials/_general.scss */
+.praca {
+  color: gray;
+}
+
+/* line 308, ../sass/partials/_general.scss */
+.parque {
+  color: red;
+}
+
+/* line 309, ../sass/partials/_general.scss */
+.ciclovia {
+  color: orange;
+}
+
+/* line 310, ../sass/partials/_general.scss */
+.ciclofaixa {
+  color: green;
+}
+
+/* line 311, ../sass/partials/_general.scss */
+.ciclofaixa-movel {
+  color: blue;
+}
+
+/* line 317, ../sass/partials/_general.scss */
 .starter {
   color: green;
 }
 
-/* line 307, ../sass/partials/_general.scss */
+/* line 318, ../sass/partials/_general.scss */
 .advanced {
   color: purple;
 }
 
-/* line 308, ../sass/partials/_general.scss */
+/* line 319, ../sass/partials/_general.scss */
 .intermediate {
   color: red;
 }
 
-/* line 310, ../sass/partials/_general.scss */
+/* line 321, ../sass/partials/_general.scss */
 .grupos-list {
   z-index: 902;
 }
 
-/* line 323, ../sass/partials/_general.scss */
+/* line 334, ../sass/partials/_general.scss */
 .grupos-level {
   display: inline-block;
   margin: 10px 0 5px 0;
@@ -414,27 +426,27 @@ ul.off-canvas-list li label {
   vertical-align: top;
 }
 
-/* line 332, ../sass/partials/_general.scss */
+/* line 343, ../sass/partials/_general.scss */
 .grupos-preco {
   padding: 2px;
   display: inline-block;
   margin: 0 10px;
 }
 
-/* line 338, ../sass/partials/_general.scss */
+/* line 349, ../sass/partials/_general.scss */
 .grupos-apoio {
   padding: 2px;
   display: inline-block;
 }
 
-/* line 348, ../sass/partials/_general.scss */
+/* line 359, ../sass/partials/_general.scss */
 .paid {
   right: 50px;
   background: url("https://cdn1.iconfinder.com/data/icons/dot/64/usd_dollar_money_cash.png");
   background-size: 100%;
 }
 
-/* line 356, ../sass/partials/_general.scss */
+/* line 367, ../sass/partials/_general.scss */
 .yes-apoio {
   right: 15px;
   background: url("https://cdn2.iconfinder.com/data/icons/pittogrammi/142/13-64.png");

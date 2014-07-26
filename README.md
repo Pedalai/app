@@ -3,7 +3,7 @@
 Projeto criado no Hackaton da [Campus Party 2014]( http://recife.campus-party.org/2014/index.html "Link da CPRecife") com o intúito de facilitar e incentivar os ciclistas a pedalarem em grupo ou individualmente, e conhecer pontos da cidade próximo a ele onde se pode pedalar.
 
 
-Este projeto foi desenvolvido utilizando a base de dados abertas da Prefeitura da cidade do Recife.
+Este projeto foi desenvolvido utilizando a base de dados abertas da Prefeitura da cidade do Recife (Ciclovias, Ciclofaixas e Rotas de Bicicletas e Parques e praças).
 
 
 ## Idealizadores
@@ -16,7 +16,7 @@ Este projeto foi desenvolvido utilizando a base de dados abertas da Prefeitura d
 
 ## Links utilizados
 
-* [Base de dados](http://dados.recife.pe.gov.br "Base de dados abertas")
+* [Base de dados](http://dados.recife.pe.gov.br/dataset "Base de dados abertas")
 
 * [Hacker Cidadão]( http://hackercidadao.com.br/ "Hacker cidadão 2.0")
 

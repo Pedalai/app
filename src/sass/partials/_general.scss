@@ -256,7 +256,7 @@ ul.off-canvas-list {
 
 
 
-// LIST LOCAIS
+// LIST LOCAIS / SOZINHO
 
 .main-section {
   width: 100%;
@@ -289,15 +289,26 @@ ul.off-canvas-list {
   text-transform: capitalize;
   font-size: 1.2em;
   padding: 2px;
+  position: relative;
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    background: url('http://icons.iconarchive.com/icons/visualpharm/icons8-metro-style/512/Plants-Trees-Deciduous-tree-icon.png') no-repeat;
+    background-size: 100%;
+  }
 }
 
 // types
-.rota {background: pink;}
-.praca {background: gray;}
-.parque {background: red;}
-.ciclovia {background: orange;}
-.ciclofaixa {background: green;}
-.ciclofaixa-movel {background: blue}
+.rota {color: pink;}
+.praca {color: gray;}
+.parque {color: red;}
+.ciclovia {color: orange;}
+.ciclofaixa {color: green;}
+.ciclofaixa-movel {color: blue}
 
 
 // GROUPS
