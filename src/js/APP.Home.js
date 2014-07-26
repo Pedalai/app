@@ -26,7 +26,7 @@ APP.Home = {
 
     function success(position) {
       // como coordenadas passo o retorno da API (position.coords.latitude, position.coords.longitude)
-      var myLatlng = new google.maps.LatLng(-8.045769, -34.905022);
+      var myLatlng = new google.maps.LatLng(-8.031030, -34.871268);
 
       // Parâmetros do mapa
       var mapOptions = {
