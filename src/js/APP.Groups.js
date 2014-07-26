@@ -2,19 +2,29 @@ var APP = APP || {};
 
 APP.Groups = {
   setUp: function() {
-    var that = this;
-    that.getData();
+    var that = this,
+        group = document.querySelector('a.group'),
+        locaisUl = document.querySelector('#locais-list');
+
+    $(group).on('click', function(event) {
+      event.preventDefault();
+      that.getData(); // call request
+      $(locaisUl).empty(); //empty ul locais
+    });
   },
 
   getData: function() {
+    var body = document.querySelector("body");
+
     $.ajax({
       url: "proxyGroups.php",
       dataType: "JSON",
       beforeSend: function() {
-        console.log("CARREGANDO GROUPS!");
+        body.classList.add('loading');
       },
 
       success: function(groups) {
+        body.classList.remove('loading');
         $.each(groups, function(key, grupo) {
           // var grupo = groups;
           var id = grupo.id,
@@ -86,7 +96,7 @@ APP.Groups = {
       },
 
       error: function() {
-        console.log("ERROR GROUPS!");
+        body.classList.add('error');
       }
     });
   }

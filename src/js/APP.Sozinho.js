@@ -2,16 +2,25 @@ var APP = APP || {};
 
 APP.Sozinho = {
   setUp: function() {
-    var that = this;
-    that.getData();
+    var that = this,
+     alone = document.querySelector('a.alone'),
+     groupUl = document.querySelector('#grupos-list');
+
+    $(alone).on('click', function(event) {
+      event.preventDefault();
+      that.getData(); // call request
+      $(groupUl).empty(); //empty ul group
+    });
   },
 
   getData: function() {
+    var body = document.querySelector("body");
+
     $.ajax({
       url: "proxySozinho.php",
       dataType: "JSON",
       beforeSend: function() {
-        console.log("CARREGANDO SOZNHO!");
+        body.classList.add('loading');
       },
 
       success: function(locais) {
@@ -66,7 +75,7 @@ APP.Sozinho = {
       },
 
       error: function() {
-        console.log("ERROR SOZNHO!");
+        body.classList.add('error');
       }
     });
   }
