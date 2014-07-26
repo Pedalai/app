@@ -51,6 +51,7 @@
 	    <section class="main-section">
 	      <!-- content goes here -->
         <ul id="locais-list" class="locais-list"></ul>
+        <ul id="grupos-list" class="grupos-list"></ul>
 	    </section>
 
 	  	<a class="exit-off-canvas"></a>

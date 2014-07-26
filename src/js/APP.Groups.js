@@ -1,6 +1,6 @@
 var APP = APP || {};
 
-APP.Sozinho = {
+APP.Groups = {
   setUp: function() {
     var that = this;
     that.getData();
@@ -11,62 +11,82 @@ APP.Sozinho = {
       url: "proxyGroups.php",
       dataType: "JSON",
       beforeSend: function() {
-        console.log("CARREGANDO SOZNHO!");
+        console.log("CARREGANDO GROUPS!");
       },
 
       success: function(groups) {
-        $.each(groups, function(key, grupos) {
-          var grupos = local,
-              id = local.id,
-              distance = local.distance,
-              name = local.name,
-              type = local.type;
+        $.each(groups, function(key, grupo) {
+          // var grupo = groups;
+          var id = grupo.id,
+              nome = grupo.name,
+              distancia = grupo.distance,
+              horario = grupo.schedule,
+              info = grupo.information,
+              apoio = grupo.car,
+              preco = grupo.price,
+              level = grupo.level,
+              latitude = grupo.lat,
+              longitude = grupo.lon;
 
               // pegando body criando os elementos
-              var ul = document.querySelector('#locais-list'),
+              var ul = document.querySelector('#grupos-list'),
                   li = document.createElement('li'),
                   h5 = document.createElement('h5'),
-                  p = document.createElement('p');
-                  span = document.createElement('span');
+                  pDistancia = document.createElement('p');
+                  pLevel = document.createElement('p');
+                  spanPreco = document.createElement('span');
+                  spanApoio = document.createElement('span');
 
               // adicionando classes
-              li.classList.add('locais-item');
-              h5.classList.add('locais-nome');
-              p.classList.add('locais-distancia');
-              span.classList.add('locais-tipo');
+              li.classList.add('grupos-item');
+              h5.classList.add('grupos-nome');
+              pDistancia.classList.add('grupos-distancia');
+              pLevel.classList.add('grupos-level');
+              spanPreco.classList.add('grupos-preco');
+              spanApoio.classList.add('grupos-apoio');
 
               // append
               ul.appendChild(li);
               li.appendChild(h5);
-              li.appendChild(p);
-              li.appendChild(span);
+              li.appendChild(pDistancia);
+              li.appendChild(pLevel);
+              li.appendChild(spanPreco);
+              li.appendChild(spanApoio);
 
               // insert data
               li.id = id;
-              h5.innerHTML = name;
-              p.innerHTML = 'Aprox. ' + distance + ' km de distância';
-              span.innerHTML = type;
+              h5.innerHTML = nome;
+              pDistancia.innerHTML = 'Aprox. ' + distancia + ' km de distância';
+              pLevel.innerHTML = level + ' (~ ' + distancia +'km)';
 
-              // check type
-              if (type == 'PraÇa') {
-                span.classList.add('praca');
-              } else if (type == 'Ciclovia') {
-                span.classList.add('ciclovia')
-              } else if (type == 'Ciclofaixa') {
-                span.classList.add('ciclofaixa')
-              } else if (type == 'Rota') {
-                span.classList.add('rota');
-              } else if (type == 'Parque') {
-                span.classList.add('parque');
-              } else if (type == 'Ciclofaixa Móvel') {
-                span.classList.add('ciclofaixa-movel');
+              // check level
+              if (level == 'intermediate') {
+                pLevel.classList.add('intermediate');
+              } else if (level == 'starter') {
+                pLevel.classList.add('starter');
+              } else if (level == 'advanced') {
+                pLevel.classList.add('advanced');
+              }
+
+              // check price
+              if (preco == '0') {
+                spanPreco.classList.add('free');
+              } else {
+                spanPreco.classList.add('paid');
+              }
+
+              // check apoio
+              if (apoio == '1') {
+                spanApoio.classList.add('yes-apoio');
+              } else {
+                spanApoio.classList.add('no-apoio');
               }
         });
 
       },
 
       error: function() {
-        console.log("ERROR SOZNHO!");
+        console.log("ERROR GROUPS!");
       }
     });
   }

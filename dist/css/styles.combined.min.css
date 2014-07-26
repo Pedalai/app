@@ -264,15 +264,31 @@ ul.off-canvas-list li label {
 }
 
 /* line 190, ../sass/partials/_general.scss */
-.main-section {
-  width: 100%;
-  min-height: 510px;
-  position: absolute;
-  height: auto;
+.locais-item, .grupos-item {
+  padding: 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #333333;
+  position: relative;
 }
 
 /* line 197, ../sass/partials/_general.scss */
-.locais-list {
+.locais-nome, .grupos-nome {
+  line-height: 1.2em;
+  font-size: 1.2em;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* line 204, ../sass/partials/_general.scss */
+.locais-distancia, .grupos-distancia {
+  color: rgba(0, 0, 0, 0.4);
+  display: block;
+  margin: 5px 0;
+  font-size: 1.2em;
+}
+
+/* line 211, ../sass/partials/_general.scss */
+.locais-list, .grupos-list {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -282,31 +298,23 @@ ul.off-canvas-list li label {
   overflow-y: auto;
 }
 
-/* line 207, ../sass/partials/_general.scss */
-.locais-item {
-  padding: 20px;
-  background: #ffffff;
-  border-bottom: 1px solid #333333;
-  position: relative;
-}
-
-/* line 214, ../sass/partials/_general.scss */
-.locais-distancia {
-  color: rgba(0, 0, 0, 0.4);
-  display: block;
-  margin: 5px 0;
-  font-size: 1.2em;
-}
-
 /* line 221, ../sass/partials/_general.scss */
-.locais-nome {
-  line-height: 1.2em;
-  font-size: 1.2em;
-  font-weight: 800;
-  text-transform: uppercase;
+.paid, .yes-apoio {
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  position: absolute;
 }
 
-/* line 228, ../sass/partials/_general.scss */
+/* line 232, ../sass/partials/_general.scss */
+.main-section {
+  width: 100%;
+  min-height: 510px;
+  position: absolute;
+  height: auto;
+}
+
+/* line 255, ../sass/partials/_general.scss */
 .locais-tipo {
   display: block;
   margin-top: 10px;
@@ -315,32 +323,84 @@ ul.off-canvas-list li label {
   padding: 2px;
 }
 
-/* line 237, ../sass/partials/_general.scss */
+/* line 264, ../sass/partials/_general.scss */
 .rota {
   background: pink;
 }
 
-/* line 238, ../sass/partials/_general.scss */
+/* line 265, ../sass/partials/_general.scss */
 .praca {
   background: gray;
 }
 
-/* line 239, ../sass/partials/_general.scss */
+/* line 266, ../sass/partials/_general.scss */
 .parque {
   background: red;
 }
 
-/* line 240, ../sass/partials/_general.scss */
+/* line 267, ../sass/partials/_general.scss */
 .ciclovia {
   background: orange;
 }
 
-/* line 241, ../sass/partials/_general.scss */
+/* line 268, ../sass/partials/_general.scss */
 .ciclofaixa {
   background: green;
 }
 
-/* line 242, ../sass/partials/_general.scss */
+/* line 269, ../sass/partials/_general.scss */
 .ciclofaixa-movel {
   background: blue;
+}
+
+/* line 275, ../sass/partials/_general.scss */
+.starter {
+  color: green;
+}
+
+/* line 276, ../sass/partials/_general.scss */
+.advanced {
+  color: purple;
+}
+
+/* line 277, ../sass/partials/_general.scss */
+.intermediate {
+  color: red;
+}
+
+/* line 291, ../sass/partials/_general.scss */
+.grupos-level {
+  display: inline-block;
+  margin: 10px 0 5px 0;
+  font-size: 1.2em;
+  padding: 2px;
+  position: relative;
+  vertical-align: top;
+}
+
+/* line 300, ../sass/partials/_general.scss */
+.grupos-preco {
+  padding: 2px;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* line 306, ../sass/partials/_general.scss */
+.grupos-apoio {
+  padding: 2px;
+  display: inline-block;
+}
+
+/* line 316, ../sass/partials/_general.scss */
+.paid {
+  right: 50px;
+  background: url("https://cdn1.iconfinder.com/data/icons/dot/64/usd_dollar_money_cash.png");
+  background-size: 100%;
+}
+
+/* line 324, ../sass/partials/_general.scss */
+.yes-apoio {
+  right: 15px;
+  background: url("https://cdn2.iconfinder.com/data/icons/pittogrammi/142/13-64.png");
+  background-size: 100%;
 }
