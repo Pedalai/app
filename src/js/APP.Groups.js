@@ -3,13 +3,13 @@ var APP = APP || {};
 APP.Groups = {
   setUp: function() {
     var that = this,
-        group = document.querySelector('a.group');
+        group = document.querySelector('a.group'),
+        section = document.querySelector('#main-section');
 
     $(group).on('click', function(event) {
       event.preventDefault();
       that.getData(); // call request
-      $("#locais-list").empty(); //empty ul locais
-      $("#locais-list").css("z-index", "901" + 2);
+      section.innerHTML = " "; //empty section
     });
   },
 
@@ -20,13 +20,13 @@ APP.Groups = {
       url: "proxyGroups.php",
       dataType: "JSON",
       beforeSend: function() {
-        console.log('Carregando Groups...');
         body.classList.add('loading');
-        console.log('Carregando 2 Groups...');
       },
 
       success: function(groups) {
         body.classList.remove('loading');
+        var ul = document.createElement('ul');
+
         $.each(groups, function(key, grupo) {
           // var grupo = groups;
           var id = grupo.id,
@@ -41,7 +41,7 @@ APP.Groups = {
               longitude = grupo.lon;
 
               // pegando body criando os elementos
-              var ul = document.querySelector('#grupos-list'),
+              var section = document.querySelector("#main-section"),
                   li = document.createElement('li'),
                   h5 = document.createElement('h5'),
                   pDistancia = document.createElement('p');
@@ -50,6 +50,8 @@ APP.Groups = {
                   spanApoio = document.createElement('span');
 
               // adicionando classes
+              ul.classList.add('grupos-list');
+              ul.id = "grupos-list";
               li.classList.add('grupos-item');
               h5.classList.add('grupos-nome');
               pDistancia.classList.add('grupos-distancia');
@@ -58,6 +60,7 @@ APP.Groups = {
               spanApoio.classList.add('grupos-apoio');
 
               // append
+              section.appendChild(ul);
               ul.appendChild(li);
               li.appendChild(h5);
               li.appendChild(pDistancia);

@@ -2,45 +2,35 @@ html, body {
 	height: 100%;
 }
 
+%content {
+  position: absolute;
+  font-size: 2em;
+  text-align: center;
+  height: 100%;
+  display: block;
+  width: 100%;
+  padding-bottom: 10px;
+  color: $black;
+  text-transform: uppercase;
+  z-index: 20000001;
+  background: rgba(255, 255, 255, .6);
+  padding-top: 80%;
+}
+
 body {
   font-family: 'source', arial, sans-serif;
 	font-size: 62.5%;
   &.loading {
-    background: rgba(255, 255, 255, .4);
-    width: 100%;
-    height: 100%;
-    position: relative;
     &::before {
-      content: "Carregando...";
-      position: absolute;
-      font-size: 2em;
-      text-align: center;
-      top: 50%;
-      display: inline-block;
-      width: 200px;
-      margin-left: -100px;
-      height: auto;
-      padding-bottom: 10px;
-      left: 50%;
-      color: $black;
-      text-transform: uppercase;
+      content: "Coletando dados...";
+      @extend %content;
     }
   }
   &.error {
     &::before {
       content: "Tente em alguns minutos.";
-      position: absolute;
-      font-size: 2em;
-      text-align: center;
-      top: 50%;
-      display: inline-block;
-      width: 200px;
-      margin-left: -100px;
-      height: auto;
-      padding-bottom: 10px;
-      left: 50%;
+      @extend %content;
       color: red;
-      text-transform: uppercase;
     }
   }
 }
