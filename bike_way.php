@@ -64,43 +64,43 @@ $ciclo_way_result[$array['key']] = $arr;
 }
 ksort($ciclo_way_result);
 
-/* ------------------------------------------------------------------------------------------------------------- */
+// /* ------------------------------------------------------------------------------------------------------------- */
 
-include_once "config.php";
+// include_once "config.php";
 
-$earthRadius = 6371000;
-$query = mysql_query("SELECT * FROM parks WHERE nome_equip_urbano <> '' OR nome_equip_urbano <> null LIMIT 20");
-$latitudeFrom = floatval($_GET['latitudeFrom']);
-$longitudeFrom = floatval($_GET['longitudeFrom']);
-$parks_result = array();
+// $earthRadius = 6371000;
+// $query = mysql_query("SELECT * FROM parks WHERE nome_equip_urbano <> '' OR nome_equip_urbano <> null LIMIT 20");
+// $latitudeFrom = floatval($_GET['latitudeFrom']);
+// $longitudeFrom = floatval($_GET['longitudeFrom']);
+// $parks_result = array();
 
-while($lin=mysql_fetch_assoc($query)){
-  $lin['latitude'] = str_replace(',', '.', $lin['latitude']);
-  $lin['longitude'] = str_replace(',', '.', $lin['longitude']);
-  $latitudeTo = floatval($lin['latitude']);
-  $longitudeTo = floatval($lin['longitude']);
+// while($lin=mysql_fetch_assoc($query)){
+//   $lin['latitude'] = str_replace(',', '.', $lin['latitude']);
+//   $lin['longitude'] = str_replace(',', '.', $lin['longitude']);
+//   $latitudeTo = floatval($lin['latitude']);
+//   $longitudeTo = floatval($lin['longitude']);
 
 
-  $latFrom = deg2rad($latitudeFrom);
-  $lonFrom = deg2rad($longitudeFrom);
-  $latTo = deg2rad($latitudeTo);
-  $lonTo = deg2rad($longitudeTo);
-  $latDelta = $latTo - $latFrom;
-  $lonDelta = $lonTo - $lonFrom;
-  $angle = 2 * asin(sqrt(pow(sin($latDelta / 2), 2) + cos($latFrom) * cos($latTo) * pow(sin($lonDelta / 2), 2)));
-  $km = (($angle * $earthRadius)/1000); // result in m
+//   $latFrom = deg2rad($latitudeFrom);
+//   $lonFrom = deg2rad($longitudeFrom);
+//   $latTo = deg2rad($latitudeTo);
+//   $lonTo = deg2rad($longitudeTo);
+//   $latDelta = $latTo - $latFrom;
+//   $lonDelta = $lonTo - $lonFrom;
+//   $angle = 2 * asin(sqrt(pow(sin($latDelta / 2), 2) + cos($latFrom) * cos($latTo) * pow(sin($lonDelta / 2), 2)));
+//   $km = (($angle * $earthRadius)/1000); // result in m
 
-  $indice = number_format($km, 6, '.', '');
-  $km = number_format($km, 1, '.', '');
-  $ar = array(
-    "id" => intval($lin['id']),
-    "name" => ucwords(strtolower(utf8_encode($lin['nome_equip_urbano']))),
-    "type" => ucwords(strtolower(utf8_encode($lin['tipo_equip_urbano']))),
-    "distance" => $km,
-    );
-  $parks_result[$indice] = $ar;
-}
-ksort($parks_result);
+//   $indice = number_format($km, 6, '.', '');
+//   $km = number_format($km, 1, '.', '');
+//   $ar = array(
+//     "id" => intval($lin['id']),
+//     "name" => ucwords(strtolower(utf8_encode($lin['nome_equip_urbano']))),
+//     "type" => ucwords(strtolower(utf8_encode($lin['tipo_equip_urbano']))),
+//     "distance" => $km,
+//     );
+//   $parks_result[$indice] = $ar;
+// }
+// ksort($parks_result);
 
-echo json_encode(array_merge($ciclo_way_result, $parks_result));
+echo json_encode($ciclo_way_result);
 ?>
