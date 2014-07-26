@@ -3,7 +3,7 @@ html, body {
 }
 
 body {
-	font-family: arial, sans-serif;
+  font-family: 'source', arial, sans-serif;
 	font-size: 62.5%;
 }
 
@@ -184,3 +184,150 @@ ul.off-canvas-list {
   z-index: 2000000;
   background: rgba(255, 255, 255, .4);
 }
+
+
+// EXTEND
+%item {
+  padding: 20px;
+  background: #ffffff;
+  border-bottom: 1px solid $black;
+  position: relative;
+}
+
+%nome {
+  line-height: 1.2em;
+  font-size: 1.2em;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+%distancia {
+  color: rgba(0,0,0, .4);
+  display: block;
+  margin: 5px 0;
+  font-size: 1.2em;
+}
+
+%list {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 900;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+%icons {
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+
+
+// LIST LOCAIS
+
+.main-section {
+  width: 100%;
+  min-height: 510px;
+  position: absolute;
+  height: auto;
+}
+
+.locais-list {
+  @extend %list;
+}
+
+.locais-item {
+  @extend %item;
+}
+
+.locais-distancia {
+  @extend %distancia;
+}
+
+.locais-nome {
+  @extend %nome;
+}
+
+.locais-tipo {
+  display: block;
+  margin-top: 10px;
+  text-transform: capitalize;
+  font-size: 1.2em;
+  padding: 2px;
+}
+
+// types
+.rota {background: pink;}
+.praca {background: gray;}
+.parque {background: red;}
+.ciclovia {background: orange;}
+.ciclofaixa {background: green;}
+.ciclofaixa-movel {background: blue}
+
+
+// GROUPS
+
+// level
+.starter {color: green;}
+.advanced {color: purple;}
+.intermediate {color: red;}
+
+.grupos-list {
+  @extend %list;
+}
+
+.grupos-item {
+  @extend %item;
+}
+
+.grupos-nome {
+  @extend %nome;
+}
+
+.grupos-level {
+  display: inline-block;
+  margin: 10px 0 5px 0;
+  font-size: 1.2em;
+  padding: 2px;
+  position: relative;
+  vertical-align: top;
+}
+
+.grupos-preco {
+  padding: 2px;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.grupos-apoio {
+  padding: 2px;
+  display: inline-block;
+}
+
+.grupos-distancia {
+  @extend %distancia;
+}
+
+// price
+.paid {
+  @extend %icons;
+  right: 50px;
+  background: url('https://cdn1.iconfinder.com/data/icons/dot/64/usd_dollar_money_cash.png');
+  background-size: 100%;
+}
+
+// apoio
+.yes-apoio {
+  @extend %icons;
+  right: 15px;
+  background: url('https://cdn2.iconfinder.com/data/icons/pittogrammi/142/13-64.png') ;
+  background-size: 100%;
+}
+
+
+
+

@@ -137,6 +137,7 @@ APP.Home = {
             infowindow.open(that._map);
 
           }
+
       },
       error: function() {
         console.log("Error!");
