@@ -15,7 +15,7 @@ APP.Geolocation.Home = {
           latitude   = APP.Geolocation._latitude,
           longitude  = APP.Geolocation._longitude,
           myLatlng   = new google.maps.LatLng(latitude, longitude),
-          
+
           mapOptions = {
             zoom: 12,
             center: myLatlng,
@@ -30,9 +30,9 @@ APP.Geolocation.Home = {
               }
             ]
           },
-          
+
           image = 'http://google-maps-icons.googlecode.com/files/cycling.png'.
-          
+
           customMarker;
 
       // exibir o mapa no elemento html;
@@ -54,7 +54,7 @@ APP.Geolocation.Home = {
         maxWidth: 0,
         pixelOffset: new google.maps.Size(-85, 0),
         zIndex: null,
-        boxStyle: { 
+        boxStyle: {
           background: "#fff",
           borderRadius: '3px',
           boxShadow: '0 0 10px rgba(0, 0, 0, .4)',
@@ -94,13 +94,13 @@ APP.Geolocation.Home = {
       request.done(function(response){
         var i = 0, c, countFeatures, countCoordinates,
             colors = [
-              "#FF0000", 
-              "#00FF00", 
-              "#0000FF", 
-              "#622b06", 
-              "#000000", 
-              "#79790b", 
-              "#1d628e", 
+              "#FF0000",
+              "#00FF00",
+              "#0000FF",
+              "#622b06",
+              "#000000",
+              "#79790b",
+              "#1d628e",
               "#FF00FF",
               "#00ff84",
               "#0000ff",
@@ -142,17 +142,17 @@ APP.Geolocation.Home = {
             icon: 'src/images/location.svg'
           });
 
-          var boxText = '<h1 class="title-info">' + value.name + '</h1>' + 
-                      '<h2 class="distance-info">' + value.distance + ' km de distância</h2>' + 
+          var boxText = '<h1 class="title-info">' + value.name + '</h1>' +
+                      '<h2 class="distance-info">' + value.distance + ' km de distância</h2>' +
                       '<a class="link-info">Pedalar até aqui</a>';
-            
+
           var myOptions = {
             content: boxText,
             disableAutoPan: false,
             maxWidth: 0,
             pixelOffset: new google.maps.Size(-140, 0),
             zIndex: null,
-            boxStyle: { 
+            boxStyle: {
               background: "#fff",
               borderRadius: '3px',
               boxShadow: '0 0 10px rgba(0, 0, 0, .4)',
@@ -171,7 +171,7 @@ APP.Geolocation.Home = {
           var infobox = new InfoBox(myOptions);
 
           google.maps.event.addListener(customMarker, 'click', (function(customMarker, i) {
-            
+
             return function() {
               infobox.open(that.pai().Map._map, customMarker);
             }
@@ -185,7 +185,7 @@ APP.Geolocation.Home = {
             $('#main-section').empty().css('z-index', '-999999');
 
             if (customMarker.id == id) {
-              
+
               customMarker.setVisible(true);
               infowindow.open(that.pai().Map._map, customMarker);
             }
