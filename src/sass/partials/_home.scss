@@ -1,0 +1,38 @@
+.infoBox {
+
+	h1 {
+		font-size: 1.2em;
+		line-height: 1.4em;
+		text-transform: uppercase;
+		width: 220px;
+	}
+
+	h2 {
+		font-size: 1.2em;
+		padding: 5px 0;
+	}
+	
+	&::before {
+		border-bottom: 10px solid #fff;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-top: 10px solid transparent;
+		content: "";
+		height: 0;
+		left: 50%;
+		position: absolute;
+		top: -20px;
+		width: 0;
+		@include transform(translateX(-50%));
+	}
+
+	.link-info {
+		background: rgba(0,0,0, .1);
+		border-top: 1px solid;
+		display: block;
+		font-size: 1.2em;
+	  	font-weight: 900;
+	  	padding: 10px 0;
+	  	text-align: center;
+	}
+}
