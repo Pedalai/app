@@ -1,4 +1,8 @@
 .infoBox {
+	background: #fff;
+	border-radius: 3px;
+	padding: 15px;
+	@include boxShadow(0 0 10px rgba(0, 0, 0, .4));
 
 	h1 {
 		font-size: 1.2em;

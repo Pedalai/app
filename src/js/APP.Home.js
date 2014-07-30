@@ -15,6 +15,8 @@ APP.Geolocation.Home = {
           latitude   = APP.Geolocation._latitude,
           longitude  = APP.Geolocation._longitude,
           myLatlng   = new google.maps.LatLng(latitude, longitude),
+          directionsService = new google.maps.DirectionsService(),
+          directionsDisplay = new google.maps.DirectionsRenderer(),
           
           mapOptions = {
             zoom: 12,
@@ -38,6 +40,8 @@ APP.Geolocation.Home = {
       // exibir o mapa no elemento html;
       that._map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
+      directionsDisplay.setMap(that._map);
+
       // marcador personalizado;
       image = 'http://google-maps-icons.googlecode.com/files/cycling.png';
 
@@ -55,11 +59,7 @@ APP.Geolocation.Home = {
         pixelOffset: new google.maps.Size(-85, 0),
         zIndex: null,
         boxStyle: { 
-          background: "#fff",
-          borderRadius: '3px',
-          boxShadow: '0 0 10px rgba(0, 0, 0, .4)',
           marginTop: '10px',
-          padding: '15px',
           width: '170px'
         },
         closeBoxMargin: "0 2px 2px 2px",
@@ -72,6 +72,20 @@ APP.Geolocation.Home = {
 
       var infobox = new InfoBox(myOptions);
       infobox.open(that.pai().Map._map, marker);
+
+      var start = myLatlng;
+      var end = new google.maps.LatLng(-8.15505, -34.90939);
+      var request = {
+          origin: start,
+          destination: end,
+          travelMode: google.maps.TravelMode.DRIVING
+      };
+      
+      directionsService.route(request, function(response, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+          directionsDisplay.setDirections(response);
+        }
+      });
 
       // ativa o método que cria as ciclofaixas depois que o mapa é criado
       if (that._map !== null) {
@@ -128,7 +142,7 @@ APP.Geolocation.Home = {
             path: DrivePath,
             strokeColor: colors[i],
             strokeOpacity: 1.0,
-            strokeWeight: 2,
+            strokeWeight: 3,
             map: that.pai().Map._map,
             id: value.id
           });
@@ -153,11 +167,7 @@ APP.Geolocation.Home = {
             pixelOffset: new google.maps.Size(-140, 0),
             zIndex: null,
             boxStyle: { 
-              background: "#fff",
-              borderRadius: '3px',
-              boxShadow: '0 0 10px rgba(0, 0, 0, .4)',
               marginTop: '13px',
-              padding: '15px',
               width: '280px'
             },
             closeBoxMargin: "0 2px 2px 2px",

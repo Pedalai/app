@@ -497,19 +497,30 @@ ul.off-canvas-list li label {
     height: 140%;
   }
 }
-/* line 3, ../sass/partials/_home.scss */
+/* line 1, ../sass/partials/_home.scss */
+.infoBox {
+  background: #fff;
+  border-radius: 3px;
+  padding: 15px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  -ms-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+/* line 7, ../sass/partials/_home.scss */
 .infoBox h1 {
   font-size: 1.2em;
   line-height: 1.4em;
   text-transform: uppercase;
   width: 220px;
 }
-/* line 10, ../sass/partials/_home.scss */
+/* line 14, ../sass/partials/_home.scss */
 .infoBox h2 {
   font-size: 1.2em;
   padding: 5px 0;
 }
-/* line 15, ../sass/partials/_home.scss */
+/* line 19, ../sass/partials/_home.scss */
 .infoBox::before {
   border-bottom: 10px solid #fff;
   border-left: 10px solid transparent;
@@ -527,7 +538,7 @@ ul.off-canvas-list li label {
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-/* line 29, ../sass/partials/_home.scss */
+/* line 33, ../sass/partials/_home.scss */
 .infoBox .link-info {
   background: rgba(0, 0, 0, 0.1);
   border-top: 1px solid;
