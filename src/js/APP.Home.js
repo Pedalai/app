@@ -26,7 +26,7 @@ APP.Home = {
 
     function success(position) {
       // como coordenadas passo o retorno da API (position.coords.latitude, position.coords.longitude)
-      var myLatlng = new google.maps.LatLng(-8.045769, -34.905022);
+      var myLatlng = new google.maps.LatLng(-8.031030,-34.871268);
 
       // Parâmetros do mapa
       var mapOptions = {
@@ -87,13 +87,13 @@ APP.Home = {
             i = 0, c, countFeatures, countCoordinates,
 
             colors = [
-              "#FF0000", 
-              "#00FF00", 
-              "#0000FF", 
-              "#622b06", 
-              "#000000", 
-              "#79790b", 
-              "#1d628e", 
+              "#FF0000",
+              "#00FF00",
+              "#0000FF",
+              "#622b06",
+              "#000000",
+              "#79790b",
+              "#1d628e",
               "#FF00FF",
               "#00ff84",
               "#0000ff",
@@ -135,29 +135,29 @@ APP.Home = {
                 });
 
                 // var infowindow = new google.maps.InfoWindow({
-                //     content: '<h1 class="title-info">' + value.name + '</h1>' + 
-                //             '<h2 class="distance-info">' + value.distance + ' km de distância</h2>' + 
+                //     content: '<h1 class="title-info">' + value.name + '</h1>' +
+                //             '<h2 class="distance-info">' + value.distance + ' km de distância</h2>' +
                 //             '<a class="link-info">Pedalar até aqui</a>',
                 //     id: value.id,
                 //     maxWidth: 170
                 // });
-                
+
                 // infowindow.setPosition(new google.maps.LatLng(DrivePath[0].k, DrivePath[0].B));
                 // infowindow.open(that._map);
 
                 var infowindow = new google.maps.InfoWindow();
 
                 google.maps.event.addListener(marcadorPersonalizado, 'click', (function(marcadorPersonalizado, i) {
-                  
+
                   return function() {
                     infowindow.setContent(
 
-                      '<h1 class="title-info">' + value.name + '</h1>' + 
-                            '<h2 class="distance-info">' + value.distance + ' km de distância</h2>' + 
+                      '<h1 class="title-info">' + value.name + '</h1>' +
+                            '<h2 class="distance-info">' + value.distance + ' km de distância</h2>' +
                             '<a class="link-info">Pedalar até aqui</a>'
-                      
+
                     );
-                    
+
                     infowindow.open(that._map, marcadorPersonalizado);
                   }
 
@@ -170,7 +170,7 @@ APP.Home = {
                   $('#main-section').empty().css('z-index', '-999999');
 
                   if (marcadorPersonalizado.id == id) {
-                    
+
                     marcadorPersonalizado.setVisible(true);
                     infowindow.open(that._map, marcadorPersonalizado);
                   }
@@ -213,7 +213,7 @@ APP.Home = {
           //       content: '<h1 class="title-info">' + objCiclo.properties.Name + '</h1>',
           //       id: objCiclo.id
           //   });
-            
+
           //   infowindow.setPosition(new google.maps.LatLng(DrivePath[0].k, DrivePath[0].B));
           //   infowindow.open(that._map);
 
