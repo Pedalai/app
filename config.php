@@ -1,13 +1,14 @@
 <?php
 $config = array(
   "nome"    =>"PEDAL AÍ",
-  "host"     =>"localhost",
-  "user"     =>"root",
-  "senha"    =>"root",
-  "db"       =>"pedalai",
+  "host"     =>"pianolab.com.br",
+  "user"     =>"prog1_rayann",
+  "senha"    =>"rayannrag1",
+  "db"       =>"prog1_pedalai",
   "banco"    =>"mysql"
 );
 
+define(SERVER, "http://54.191.37.60/pedalai/");
 
 function sitei($string)
 {
