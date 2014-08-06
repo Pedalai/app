@@ -16,8 +16,8 @@ $ciclo_way = json_decode($ciclo_way, true);
 $earthRadius = 6371000;
 $ciclo_way_result = array();
 
-$latitudeFrom = $_GET['latitudeFrom'];
-$longitudeFrom = $_GET['longitudeFrom'];
+$latitudeFrom = $_GET['latitude'];
+$longitudeFrom = $_GET['longitude'];
 
 foreach ($ciclo_way['features'] as $key => $lin) {
 
@@ -68,10 +68,7 @@ ksort($ciclo_way_result);
 
 include_once "config.php";
 
-$earthRadius = 6371000;
 $query = mysql_query("SELECT * FROM parks WHERE nome_equip_urbano <> '' OR nome_equip_urbano <> null LIMIT 20");
-$latitudeFrom = floatval($_GET['latitudeFrom']);
-$longitudeFrom = floatval($_GET['longitudeFrom']);
 $parks_result = array();
 
 while($lin=mysql_fetch_assoc($query)){
@@ -97,10 +94,49 @@ while($lin=mysql_fetch_assoc($query)){
     "name" => ucwords(strtolower(utf8_encode($lin['nome_equip_urbano']))),
     "type" => ucwords(strtolower(utf8_encode($lin['tipo_equip_urbano']))),
     "distance" => $km,
+    "geometry" => array(floatval($lin['longitude']), floatval($lin['latitude']))
     );
   $parks_result[$indice] = $ar;
 }
 ksort($parks_result);
 
-echo json_encode(array_merge($ciclo_way_result, $parks_result));
+/* ------------------------------------------------------------------------------------------------------------- */
+
+$query = mysql_query("SELECT * FROM groups");
+$groups = array();
+
+while($lin=mysql_fetch_assoc($query)){
+  $lin['lat'] = str_replace(',', '.', $lin['lat']);
+  $lin['lon'] = str_replace(',', '.', $lin['lon']);
+  $latitudeTo = floatval($lin['lat']);
+  $longitudeTo = floatval($lin['lon']);
+
+
+  $latFrom = deg2rad($latitudeFrom);
+  $lonFrom = deg2rad($longitudeFrom);
+  $latTo = deg2rad($latitudeTo);
+  $lonTo = deg2rad($longitudeTo);
+  $latDelta = $latTo - $latFrom;
+  $lonDelta = $lonTo - $lonFrom;
+  $angle = 2 * asin(sqrt(pow(sin($latDelta / 2), 2) + cos($latFrom) * cos($latTo) * pow(sin($lonDelta / 2), 2)));
+  $km = (($angle * $earthRadius)/1000); // result in m
+
+  $indice = number_format($km, 6, '.', '');
+  $km = number_format($km, 1, '.', '');
+  $ar = array(
+    "id" => intval($lin['id']),
+    "name" => utf8_encode($lin['name']),
+    "distance" => $km,
+    "schedule" => utf8_encode($lin['schedule']),
+    "information" => utf8_encode($lin['description']),
+    "car" => $lin['car'],
+    "price" => $lin['price'],
+    "level" => $lin['level'],
+    "geometry" => array(floatval($lin['lon']), floatval($lin['lat']))
+    );
+  $groups[$indice] = $ar;
+}
+ksort($groups);
+
+echo json_encode(array("cicloways" => $ciclo_way_result, "parks" => $parks_result, "groups" => $groups));
 ?>
