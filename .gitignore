@@ -1,4 +1,4 @@
-/index.php
+/config.php
 /sftp-config.json
 .DS_Store
 node_modules/*
@@ -6,3 +6,4 @@ node_modules/*
 .git
 /nbproject/private/
 arquivos/*
+config.php

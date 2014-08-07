@@ -1,14 +1,13 @@
 <?php
+
 $config = array(
-  "nome"    =>"PEDAL AÍ",
-  "host"     =>"pianolab.com.br",
-  "user"     =>"prog1_rayann",
-  "senha"    =>"piano0909",
-  "db"       =>"prog1_pedalai",
+  "nome"    =>"PEDALAÍ",
+  "host"     =>"localhost",
+  "user"     =>"root",
+  "senha"    =>"",
+  "db"       =>"pedalai",
   "banco"    =>"mysql"
 );
-
-define(SERVER, "http://prog1.studio.pianolab.com.br/pedalai/");
 
 function sitei($string)
 {
