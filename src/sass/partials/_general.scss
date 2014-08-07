@@ -65,33 +65,36 @@ input {
 .canvas-list {
   @extend %title;
   border-bottom: 1px solid #262626;
-  a {
-    padding-bottom: 20px;
-    padding-left: 50px !important;
-    font-size: 2em;
-    border: none !important;
-    position: relative;
-    &.alone {
-      &::before {
-        content: "";
-        background: transparent url("https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male-32.png") no-repeat center center;
-      }
-    }
-    &.group {
-      &::before {
-        content: "";
-        background: transparent url("https://cdn2.iconfinder.com/data/icons/pittogrammi/142/88-32.png") no-repeat center center;
-      }
-    }
+  cursor: pointer;
+  padding-bottom: 20px;
+  padding-left: 50px !important;
+  font-size: 2em;
+  position: relative;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, .1);
+  }
+
+  &#alone {
     &::before {
       content: "";
-      width: 30px;
-      height: 30px;
-      display: inline-block;
-      position: absolute;
-      left: 10px;
-      top: 5px;
+      background: transparent url("https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male-32.png") no-repeat center center;
     }
+  }
+  &#group {
+    &::before {
+      content: "";
+      background: transparent url("https://cdn2.iconfinder.com/data/icons/pittogrammi/142/88-32.png") no-repeat center center;
+    }
+  }
+  &::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    top: 10px;
   }
 }
 
@@ -212,6 +215,9 @@ ul.off-canvas-list {
   }
 }
 
+.move-right .exit-off-canvas {
+  @include boxShadow(none);
+}
 
 // MAP
 
@@ -277,11 +283,31 @@ ul.off-canvas-list {
 // LIST LOCAIS / SOZINHO
 
 .main-section {
+  background-color: #fff;
   width: 100%;
   min-height: 510px;
   position: absolute;
   height: auto;
   z-index: -999999;
+  overflow: hidden;
+
+  ul {
+    height: 100%;
+    position: relative;
+    overflow-y: auto;
+  }
+
+  li {
+    padding: 20px;
+
+    &:nth-child(odd) {
+      background-color: #dedede;
+    }
+  }
+
+  h5 {
+    font-size: 2em;
+  }
 }
 
 .locais-list {

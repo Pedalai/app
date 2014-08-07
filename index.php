@@ -27,9 +27,9 @@
 	    <!-- menu esquerdo -->
 	    <aside class="left-off-canvas-menu">
 	      <ul class="off-canvas-list">
-	        <li><label class="canvas-title">Quero Pedalar <span>mapa ></span></label></li>
-	        <li class="canvas-list alone"><a class="alone" href="#">Sozinho</a></li>
-	        <li class="canvas-list"><a class="group" href="#">Em Grupo</a></li>
+	        <li><label class="canvas-title">Quero Pedalar</label></li>
+	        <li class="canvas-list" id="alone">Sozinho</li>
+	        <li class="canvas-list" id="group">Em Grupo</li>
 	      </ul>
 
 	     	<?php include('inc/legends.php') ?>

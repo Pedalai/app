@@ -6,7 +6,8 @@ module.exports = function( grunt ) {
             'src/js/APP.js', 
             'src/js/APP.Geolocation.js',
             'src/js/APP.Home.js',
-            'src/js/APP.Request.js'
+            'src/js/APP.Request.js',
+            'src/js/APP.List.js'
         ];
 
 	// Load all tasks
