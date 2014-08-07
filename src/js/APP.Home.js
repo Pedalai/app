@@ -2,6 +2,8 @@ var APP = APP || {};
 var Geolocation = APP || {};
 
 APP.Geolocation.Home = {
+  _objResponse: null,
+
   setUp: function(){
     var that = this;
   },
@@ -86,7 +88,7 @@ APP.Geolocation.Home = {
 
       // ativa o método que cria as ciclofaixas depois que o mapa é criado
       if (that._map !== null) {
-        if (that.pai().Cycle._objCycle === null) {
+        if (that.pai()._objResponse === null) {
           that.pai().Cycle.makeCycleway();
         }
       };
@@ -94,15 +96,17 @@ APP.Geolocation.Home = {
   },
 
   Cycle: {
-    _objCycle: null,
-
     // método que cria as ciclofaixas, ciclovias e rotas de bicicletas
     makeCycleway: function(){
       var that = this,
-          path = 'proxy.php',
-          request = $.when(APP.Request.makeRequest(path));
+          path = 'json.php',
+          params = {
+            latitude: APP.Geolocation._latitude,
+            longitude: APP.Geolocation._longitude
+          },
+          request = $.when(APP.Request.makeRequest(path, params));
 
-      request.done(function(response){
+      request.done(function(response){console.log(response);
         var c, countCoordinates,
             colors = [
               "#FF0000", // Ciclovia - red
@@ -112,10 +116,10 @@ APP.Geolocation.Home = {
           ];
 
         // guarda o objeto retornado da requisição
-        that._objCycle = response;
+        that.pai()._objResponse = response;
 
         // percorre todos os objetos de ciclovias encontradas
-        $.each(that._objCycle, function(idx, value){
+        $.each(that.pai()._objResponse.cicloways, function(idx, value){
           var DrivePath = [],
             coordinates = value.geometry;
 
@@ -236,23 +240,6 @@ APP.Geolocation.Home = {
               event.preventDefault();
             });
           });
-
-          // $('#main-section').on('click', '.locais-item', function(event){
-          //   var id = $(event.currentTarget).attr('id');
-
-          //   customMarker.setVisible(false);
-          //   $('#main-section').empty().css('z-index', '-999999');
-
-          //   if (customMarker.id == id) {
-
-          //     customMarker.setVisible(true);
-          //     infowindow.open(that.pai().Map._map, customMarker);
-          //   }
-          // });
-
-          // $('.right-small').on('click', function(event){
-          //   customMarker.setVisible(true);
-          // });
         });
       });
     }

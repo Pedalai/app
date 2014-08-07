@@ -124,13 +124,14 @@ input {
 
 .inner-wrap {
   background-color: rgba(4, 34, 62, .4);
+  height: 80px;
 }
 
 .tab-bar {
   display: inline-block;
   vertical-align: middle;
   width: 70%;
-  margin: 2.5% 0;
+  margin: 17px 0;
   left: 5%;
   background: #ffffff;
   border: 1px solid #fff;
@@ -203,7 +204,7 @@ ul.off-canvas-list {
   border-left: solid 1px #1a1a1a;
   margin-left: 60px;
   background: #ffffff;
-  margin: 2.5% auto;
+  margin: 17px auto;
   right: -12%;
   position: relative;
   a {
@@ -283,18 +284,20 @@ ul.off-canvas-list {
 // LIST LOCAIS / SOZINHO
 
 .main-section {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, .6);
   width: 100%;
-  min-height: 510px;
   position: absolute;
-  height: auto;
   z-index: -999999;
-  overflow: hidden;
+  overflow: scroll;
+  top: 80px;
+  left: 0;
 
   ul {
-    height: 100%;
+    background-color: #fff;
+    // height: 100%;
     position: relative;
     overflow-y: auto;
+    width: 100%;
   }
 
   li {
