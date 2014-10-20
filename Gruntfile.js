@@ -14,12 +14,15 @@ module.exports = function( grunt ) {
 	// Load all tasks
 	require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
 
+  // Tasks Time
+  require('time-grunt')(grunt);
+
 	grunt.initConfig({
 		// Watch
 		watch: {
 			css: {
 				files: [ 'app/src/sass/**/*' ],
-				tasks: [ 'compass:src', 'concat:css' ]
+				tasks: [ 'sass:dist', 'concat:css' ]
 			},
 
 			js: {
@@ -28,24 +31,19 @@ module.exports = function( grunt ) {
 			}
 		},
 
-		// Compass scss
-		compass: {
-			src: {
-				options: {
-					config: 'config.rb'
-				}
-			},
-
-			dist: {
-				options: {
-					force: true,
-					config: 'config.rb',
-					outputStyle: 'compressed',
-					relativeAssets: true
-				}
-			}
-		},
-
+    // SASS
+    sass: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'src/',
+          src: 'sass/*.scss',
+          dest: 'src/css/',
+          ext: '.css'
+        }]
+      }
+    },
+    
 		// Concateção dos arquivos CSS e JS
 		concat: {
 			css: {
@@ -55,7 +53,6 @@ module.exports = function( grunt ) {
 
 			js: {
 				src: filesJS,
-
 				dest: 'app/dist/js/scripts.combined.min.js'
 			}
 		},
@@ -119,6 +116,6 @@ module.exports = function( grunt ) {
 	// registrando tarefa default
 	grunt.registerTask( 'default', [ 'browserSync', 'watch' ] );
 	grunt.registerTask( 'img', [ 'imagemin' ] );
-	grunt.registerTask( 'src', [ 'compass:src', 'concat:js', 'concat:css' ] );
-	grunt.registerTask( 'dist', [ 'compass:dist', 'uglify:dist', 'concat:css', 'imagemin' ] );
+	grunt.registerTask( 'src', [ 'sass:dist', 'concat:js', 'concat:css' ] );
+	grunt.registerTask( 'dist', [ 'sass:dist', 'uglify:dist', 'concat:css', 'imagemin' ] );
 };
