@@ -1,10 +1,11 @@
-/* reset */
-@import "compass/reset";
+// Reset
+@import 'compass/reset';
 
-@import "base";
+// Structure
+@import 'structure';
 
-/* partials */
-@import "partials/fonts";
-@import "partials/general";
-@import "partials/home";
-@import "partials/map";
+// Custom
+@import 'base';
+@import 'typography';
+@import 'components';
+@import 'general';

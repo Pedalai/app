@@ -1,0 +1,226 @@
+// ==========================================================================
+//               Base: Variables, Mixins & Utilities
+// ==========================================================================
+
+// ——————————————
+//     Colors
+// ——————————————
+
+// Hexadecimals
+$blue-primary:          #0071c6;
+$blue-dark:             #00918c;
+$blue-light:            #00a6cf;
+
+$green-primary:         #00b6b0;
+$green-light:           #00cd91;
+$green-dark:            #00c353;
+
+// RGB
+$blue-primary-rgb:      rgb(0, 113, 198);
+$blue-dark:             rgb(0, 145, 140);
+$blue-light:            rgb(0, 166, 207);
+
+$green-primary:         rgb(0, 182, 176);
+$green-light:           rgb(0, 205, 145);
+$green-dark:            rgb(0, 195, 83);
+
+// Names
+
+
+// —————————————————————————
+//     Typography
+// —————————————————————————
+
+// Size
+$fs-root:                62.5%;
+$fs-large:               4.8rem; // 48px
+$fs-medium:              3.0rem; // 30px
+$fs-small:               2.0rem; // 20px
+
+// Family
+$ff-general: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+// Style
+$f-bold:                 bold;
+
+// Weigth
+$fw-light:               300;
+$fw-semi-bold:           600;
+
+
+// ——————————————————————
+//     Path
+// ——————————————————————
+
+// Images
+$image-path: '../../src/images/';
+
+
+// ——————————————————————
+//     Mixins
+// ——————————————————————
+
+// Gradients
+@mixin gradient($color-1, $color-2) {
+  background-color: $color-1;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($color-1), to($color-2));
+  background: -webkit-linear-gradient(bottom, $color-1, $color-2);
+  background: -moz-linear-gradient(bottom, $color-1, $color-2);
+  background: -ms-linear-gradient(bottom, $color-1, $color-2);
+  background: -o-linear-gradient(bottom, $color-1, $color-2);
+}
+
+// Placeholder
+@mixin placeholder {
+  ::-webkit-input-placeholder {
+     color: #f00;
+     background-color: #fff;
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+     color: #f00;
+     background-color: #fff;
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+     color: #f00;
+     background-color: #fff;
+  }
+
+  :-ms-input-placeholder {  
+     color: #f00;
+     background-color: #fff;
+  }
+}
+
+// Text Truncate
+@mixin truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// Transition
+@mixin transition($property, $time, $method, $delay){
+  -webkit-transition: $property $time $method $delay;
+     -moz-transition: $property $time $method $delay;
+      -ms-transition: $property $time $method $delay;
+       -o-transition: $property $time $method $delay;
+          transition: $property $time $method $delay;
+}
+
+// Border-Radius
+@mixin bdr($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+//
+// Shadow
+//
+
+// box-shadow
+@mixin bsd($rulers...) {
+  -webkit-box-shadow: $rulers;
+     -moz-box-shadow: $rulers;
+      -ms-box-shadow: $rulers;
+       -o-box-shadow: $rulers;
+          box-shadow: $rulers;
+}
+
+// text-shadow
+@mixin tsd($x, $y, $blur, $color) {
+  -webkit-text-shadow: $x $y $blur $color;
+     -moz-text-shadow: $x $y $blur $color;
+      -ms-text-shadow: $x $y $blur $color;
+       -o-text-shadow: $x $y $blur $color;
+          text-shadow: $x $y $blur $color;
+}
+
+//
+// Translate
+//
+
+// translateY
+@mixin translateY($value) {
+  -webkit-transform: translateY($value);
+     -moz-transform: translateY($value);
+      -ms-transform: translateY($value);
+       -o-transform: translateY($value);
+          transform: translateY($value);
+}
+
+// translateX
+@mixin translateX($value) {
+  -webkit-transform: translateX($value);
+     -moz-transform: translateX($value);
+      -ms-transform: translateX($value);
+       -o-transform: translateX($value);
+          transform: translateX($value);
+}
+
+// translate3d
+@mixin translate3d($value1, $value2, $value3) {
+  -webkit-transform: translate3d($value1, $value2, $value3);
+     -moz-transform: translate3d($value1, $value2, $value3);
+      -ms-transform: translate3d($value1, $value2, $value3);
+       -o-transform: translate3d($value1, $value2, $value3);
+          transform: translate3d($value1, $value2, $value3);
+}
+
+// skew
+@mixin skew($value) {
+  -webkit-transform: skew($value);
+     -moz-transform: skew($value);
+      -ms-transform: skew($value);
+       -o-transform: skew($value);
+          transform: skew($value);
+}
+
+// rotate
+@mixin rotate($value) {
+  -webkit-transform: rotate($value);
+     -moz-transform: rotate($value);
+      -ms-transform: rotate($value);
+       -o-transform: rotate($value);
+          transform: rotate($value);
+}
+
+// transform-origin
+@mixin origin($value) {
+  -webkit-transform-origin: $value;
+     -moz-transform-origin: $value;
+      -ms-transform-origin: $value;
+       -o-transform-origin: $value;
+          transform-origin: $value;
+}
+
+// scale
+@mixin scale($x, $y) {
+  -webkit-transform: scale($x, $y);
+     -moz-transform: scale($x, $y);
+      -ms-transform: scale($x, $y);
+       -o-transform: scale($x, $y);
+          transform: scale($x, $y);
+}
+
+// animation
+@mixin animation($rulers...){
+  -webkit-animation: $rulers;
+     -moz-animation: $rulers;
+      -ms-animation: $rulers;
+       -o-animation: $rulers;
+          animation: $rulers;
+}
+
+// appearance
+@mixin apr($value) {
+  -webkit-appearance: $value;
+     -moz-appearance: $value;
+      -ms-appearance: $value;
+       -o-appearance: $value;
+          appearance: $value;
+}
