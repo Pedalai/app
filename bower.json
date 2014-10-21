@@ -23,5 +23,8 @@
   "dependencies": {
     "angular": "~1.2.25",
     "angular-route": "~1.2.25"
+  },
+  "devDependencies": {
+    "angular-bootstrap-switch": "~0.3.0"
   }
 }

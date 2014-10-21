@@ -7,6 +7,15 @@
 
 	<title><?php echo _TITLE ?></title>
 
+  <!-- META TAGS -->
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=1.0, user-scalable=0">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-touch-fullscreen" content="yes" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="format-detection" content="telephone=yes">
+  <meta http-equiv="cleartype" content="on">
+
   <!-- Facebook  -->
   <meta property="og:type" content="business.business">
   <meta property="og:url" content="http://pedalai.com.br">
@@ -33,19 +42,42 @@
 
 </head>
 
-<body data-ng-app="APP">
-	<header>
-		<h1><?php echo _TITLE ?></h1>
+<body>
+  <header id="header-primary" class="header-primary">
+    <h1 class="logo">
+      <a href="#" title="Pedalaí">Pedalaí</a>
+    </h1>
+
+    <nav class="nav-primary">
+      <div class="legend-choose">
+        <p>Vou pedalar</p>
+        <h2>Sozinho</h2>
+      </div>
+
+      <div class="switch-choose">
+      </div>
+    </nav>
 	</header>
 
-	<ul class="menu">
-		<li ng-class="{active: activeLink == '/'}"><a href="#/" title="Lista" class="icon-list"></a></li>
-		<li ng-class="{active: activeLink == '/map'}"><a href="#/map" title="Mapa" class="icon-location"></a></li>
-	</ul>
+	<main id="main" class="main">
+	</main>
 
-	<!-- view - start -->
-	<div data-ng-view class="content"></div>
-	<!-- view - end -->
+	<footer id="footer-primary" class="footer-primary">
+    <aside class="details">
+      <div>
+        <figure class="ico-local">
+          <img src="" alt="Ícone do local">
+        </figure>
+        <h3 class="title-local">Praça do Arsenal</h3>
+        <address>Rua do Bom Jesus, Recife - PE</address>
+      </div>
+
+      <p class="distance">2,4km</p>
+    </aside>
+
+    <button class="go-route">Iniciar rota</button>
+	</footer>
+
 
 	<!-- Scripts -->
 	<script src="libs/angular/angular.min.js"></script>
