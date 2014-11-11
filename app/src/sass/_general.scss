@@ -1,0 +1,55 @@
+// ====================
+// General
+// ====================
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::selection {
+  text-shadow: none;
+  background: $green-dark;
+  color: $blue-light;
+}
+
+::-moz-selection {
+  text-shadow: none;
+  background: $green-dark;
+  color: $blue-light;
+}
+
+::-webkit-input-placeholder {
+ color: $blue-primary;
+ text-transform: uppercase;
+ text-transform: none;
+}
+
+:-moz-placeholder {
+  color: $blue-primary;
+ text-transform: uppercase;
+ text-transform: none;
+}
+
+::-moz-placeholder {
+  color: $blue-primary;
+ text-transform: uppercase;
+ text-transform: none;
+}
+
+:-ms-input-placeholder {
+  color: $blue-primary;
+ text-transform: uppercase;
+ text-transform: none;
+}
+
+input {
+  &:focus {
+    border-color: $blue-light;
+  }
+}
+
+html { font-size: $fs-root; }

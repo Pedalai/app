@@ -38,7 +38,7 @@
   <link type="text/plain" rel="author" href="http://pedalai.com.br/humans.txt" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="dist/css/styles.combined.min.css">
+  <link rel="stylesheet" href="dist/css/style.min.css">
 
 </head>
 
@@ -80,12 +80,11 @@
 
 
 	<!-- Libs -->
-	<script src="libs/angular/angular.min.js"></script>
-	<script src="libs/angular-route/angular-route.min.js"></script>
 	<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
 	<!-- JS -->
-  <script src="dist/js/scripts.combined.min.js"></script>
+  <script src="dist/js/libs.min.js"></script>
+  <script src="dist/js/scripts.min.js"></script>
 
 	<!-- BrowserSync -->
   <script type='text/javascript'>//<![CDATA[

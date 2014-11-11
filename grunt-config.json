@@ -1,0 +1,79 @@
+{
+  "watch": {
+    "options": {
+      "livereload": true
+    },
+
+    "css": {
+      "files": "app/src/sass/{,*/}*.{scss,sass}",
+      "tasks": ["sass:dist"]
+    },
+
+    "js": {
+      "files": "app/src/js/**/*",
+      "tasks": ["uglify"]
+    },
+
+    "html": {
+      "files": ["app/*.{html,htm,shtml,shtm,xhtml,php,jsp,asp,aspx,erb,ctp}"]
+    }
+  },
+
+  "sass": {
+    "dist": {
+      "options": {
+        "sourcemap": "none",
+        "style": "expanded"
+      },
+
+      "files": {
+        "app/dist/css/style.min.css": "app/src/sass/main.scss"
+      }
+    }
+  },
+
+  "browserSync": {
+    "bsFiles": {
+      "src": ["app/src/css/*.css", "app/*.{html,htm,shtml,shtm,xhtml,php,jsp,asp,aspx,erb,ctp}"]
+    },
+
+    "options": {
+      "watchTask": true
+    }
+  },
+
+  "uglify": {
+    "options": {
+      "mangle": false
+    },
+
+    "dist": {
+      "files": {
+        "app/dist/js/scripts.min.js": [
+          "app/src/js/app.js",
+          "app/src/js/services/request.js",
+          "app/src/js/controllers/list-controller.js",
+          "app/src/js/controllers/map-controller.js",
+          "app/src/js/filters/search.js",
+          "app/src/js/directives/map.js"
+        ],
+
+        "app/dist/js/libs.min.js": [
+          "app/src/js/libs/angular/angular.min.js",
+          "app/src/js/libs/angular-route/angular-route.min.js"
+        ]
+      }
+    }
+  },
+
+  "imagemin": {
+    "dynamic": {
+      "files": [{
+        "expand": true,
+        "cwd": "app/src/images",
+        "src": ["**/*.{png,jpg,gif}"],
+        "dest": "app/dist/images"
+      }]
+    }
+  }
+}

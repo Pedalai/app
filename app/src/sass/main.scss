@@ -1,11 +1,10 @@
 // Reset
-@import 'reset';
+@import '_reset';
 
 // Structure
-@import 'structure';
+@import '_structure';
 
 // Custom
-@import 'base';
-@import 'typography';
-@import 'components';
-@import 'general';
+@import '_base';
+@import '_components';
+@import '_general';
