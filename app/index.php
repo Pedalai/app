@@ -79,14 +79,16 @@
 	</footer>
 
 
-	<!-- Scripts -->
+	<!-- Libs -->
 	<script src="libs/angular/angular.min.js"></script>
 	<script src="libs/angular-route/angular-route.min.js"></script>
-	<!-- // <script src='http://maps.googleapis.com/maps/api/js?sensor=false'></script> -->
+	<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
-	<script src="dist/js/scripts.combined.min.js"></script>
+	<!-- JS -->
+  <script src="dist/js/scripts.combined.min.js"></script>
 
-	<script type='text/javascript'>//<![CDATA[
+	<!-- BrowserSync -->
+  <script type='text/javascript'>//<![CDATA[
 ;document.write("<script defer src='//HOST:3000/socket.io/socket.io.js'><\/script><script defer src='//HOST:3001/client/browser-sync-client.0.9.1.js'><\/script>".replace(/HOST/g, location.hostname));
 //]]></script>
 </body>
