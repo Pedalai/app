@@ -36,9 +36,12 @@ $fs-root:                62.5%;
 $fs-large:               4.8rem; // 48px
 $fs-medium:              3.0rem; // 30px
 $fs-small:               2.0rem; // 20px
+$fs-extra-small:         1.8rem; // 18px
 
 // Family
 $ff-general: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$ff-bold: 'helveticaneueltstd';
+$ff-regular: 'helveticaneueltstd-ltex';
 
 // Style
 $f-bold:                 bold;
@@ -47,6 +50,8 @@ $f-bold:                 bold;
 $fw-light:               300;
 $fw-semi-bold:           600;
 
+// Line height
+$line-height:            2.4rem; // 24px
 
 // ——————————————————————
 //     Path
