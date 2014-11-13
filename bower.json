@@ -1,0 +1,32 @@
+{
+  "name": "pedalai-app",
+  "version": "2.0.0",
+  "description": "WebApp desenvolvido para incentivo do uso da bicicleta para a cidade do Recife",
+  "main": "app/dist/js/scripts.combined.min.js",
+  "keywords": [
+    "pedalai",
+    "app"
+  ],
+  "authors": [
+    "Sérgio Hampel sergiohampel@gmail.com",
+    "Thulio Philipe thulioph@gmail.com"
+  ],
+  "license": "MIT",
+  "homepage": "http://app.pedalai.com.br",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.25",
+    "angular-route": "~1.2.25"
+  },
+  "devDependencies": {
+    "angular-bootstrap-switch": "~0.3.0",
+    "bootstrap-switch": "~3.2.1",
+    "jquery": "~2.1.1"
+  }
+}

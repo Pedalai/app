@@ -1,16 +1,26 @@
 {
-  "name": "ProjectName",
-  "version": "0.1.0",
-  "description": "",
-  "private": true,
+  "name": "pedalai-app",
+  "version": "2.0.0",
+  "title": "Pedalaí",
+  "homepage": "http://app.pedalai.com",
+  "description": "WebApp desenvolvido para incentivo do uso da bicicleta para a cidade do Recife",
+  "author": {
+    "name": "thulioph",
+    "url": "http://www.thulioph.com",
+    "email": "thulioph@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pedalai/app.git"
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
-    "grunt-browser-sync": "^0.9.1",
-    "grunt-contrib-compass": "^0.8.0",
-    "grunt-contrib-concat": "^0.4.0",
-    "grunt-contrib-imagemin": "^0.7.1",
-    "grunt-contrib-uglify": "^0.5.0",
     "grunt-contrib-watch": "^0.6.1",
-    "matchdep": "^0.3.0"
+    "grunt-contrib-sass": "~0.8.1",
+    "grunt-browser-sync": "^0.9.1",
+    "grunt-contrib-uglify": "^0.5.0",
+    "grunt-contrib-imagemin": "^0.7.1",
+    "time-grunt": "~1.0.0",
+    "load-grunt-tasks": "~1.0.0"
   }
 }

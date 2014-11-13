@@ -1,0 +1,193 @@
+// ====================
+// General
+// ====================
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::selection {
+  text-shadow: none;
+  background: $green-dark;
+  color: $blue-light;
+}
+
+::-moz-selection {
+  text-shadow: none;
+  background: $green-dark;
+  color: $blue-light;
+}
+
+::-webkit-input-placeholder {
+ color: $blue-primary;
+ text-transform: uppercase;
+ text-transform: none;
+}
+
+:-moz-placeholder {
+  color: $blue-primary;
+ text-transform: uppercase;
+ text-transform: none;
+}
+
+::-moz-placeholder {
+  color: $blue-primary;
+ text-transform: uppercase;
+ text-transform: none;
+}
+
+:-ms-input-placeholder {
+  color: $blue-primary;
+ text-transform: uppercase;
+ text-transform: none;
+}
+
+input {
+  &:focus {
+    border-color: $blue-light;
+  }
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+html {
+  font-size: $fs-root;
+  font-family: $ff-general;
+}
+
+
+// ====================
+// Header
+// ====================
+.header-primary {
+  width: 100%;
+  height: 165px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.logo {
+  height: 56px;
+  margin: 0 auto;
+  position: relative;
+  background-color: $green-primary;
+
+  a {
+    text-indent: -99999px;
+    outline: none;
+    display: block;
+    height: 56px;
+    background-position: center center;
+    background-image: url('../images/logo-pedalai.png');
+    background-size: 151px 45px;
+    background-repeat: no-repeat;
+  }
+}
+
+.nav-primary {
+  height: 90px;
+  padding: 10px;
+  background-color: $blue-dark;
+}
+
+.legend-choose {
+  display: inline-block;
+  width: 150px;
+  vertical-align: middle;
+}
+
+.title-legend {
+  color: #ffffff;
+  font-size: $fs-extra-small;
+  text-align: left;
+  line-height: $line-height;
+}
+
+.ride-type {
+  @extend .title-legend;
+  font-family: $ff-bold;
+  font-size: $fs-medium;
+  margin-top: 15px;
+}
+
+.switch-choose {
+  width: 170px;
+  height: 60px;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #00cd91;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .btn-ride {
+    width: 82px;
+    height: 100%;
+    display: inline-block;
+    background-color: $blue-dark;
+    @include apr(none);
+
+    &.alone {
+      border-right: 1px solid #00cd91;
+      background-image: url('../images/icones/icon-alone.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 39px 39px;
+    }
+
+    &.group {
+      background-image: url('../images/icones/icon-group.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 75px 38px;
+    }
+
+    &.off {
+      opacity: .5;
+      @include bsd(inset 0 0 25px #000);
+    }
+  }
+}
+
+
+// ====================
+// Main
+// ====================
+.main {
+  width: 100%;
+  height: 100%;
+  min-height: 630px;
+  position: relative;
+  z-index: 2;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  top: 148px;
+  z-index: -99999;
+}
+
+
+
+// ====================
+// Footer
+// ====================
+.footer-primary {
+  display: none;
+  // width: 100%;
+  // height: 170px;
+  // position: absolute;
+  // z-index: 10;
+  // bottom: 0;
+  // background-color: $blue-light;
+}
