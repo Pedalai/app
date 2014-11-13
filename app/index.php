@@ -50,16 +50,21 @@
 
     <nav class="nav-primary">
       <div class="legend-choose">
-        <p>Vou pedalar</p>
-        <h2>Sozinho</h2>
+        <h3 class="title-legend">Vou pedalar</h3>
+        <h2 class="ride-type" id="ride-type">Sozinho</h2>
       </div>
 
-      <div class="switch-choose">
+      <div id="switch-choose" class="switch-choose">
+        <button id="btn-alone" class="btn-ride alone"></button>
+        <button id="btn-group" class="btn-ride group"></button>
+
+        <!-- <input type="checkbox" id="switch" checked> -->
       </div>
     </nav>
 	</header>
 
 	<main id="main" class="main">
+    <div id="map" class="map"></div>
 	</main>
 
 	<footer id="footer-primary" class="footer-primary">
@@ -84,7 +89,18 @@
 
 	<!-- JS -->
   <script src="dist/js/libs.min.js"></script>
-  <script src="dist/js/scripts.min.js"></script>
+  <!-- // <script src="dist/js/scripts.min.js"></script> -->
+
+  <script src="src/js/APP.js"></script>
+  <script src="src/js/APP.Switch.js"></script>
+  <script src="src/js/APP.Geolocation.js"></script>
+  <script src="src/js/APP.Home.js"></script>
+  <script src="src/js/APP.Request.js"></script>
+  <script src="src/js/APP.List.js"></script>
+
+  <script>
+    APP.iniciar();
+  </script>
 
 	<!-- BrowserSync -->
   <script type='text/javascript'>//<![CDATA[
