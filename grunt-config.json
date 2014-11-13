@@ -50,17 +50,18 @@
     "dist": {
       "files": {
         "app/dist/js/scripts.min.js": [
-          "app/src/js/app.js",
-          "app/src/js/services/request.js",
-          "app/src/js/controllers/list-controller.js",
-          "app/src/js/controllers/map-controller.js",
-          "app/src/js/filters/search.js",
-          "app/src/js/directives/map.js"
+        "app/src/js/APP.js/APP.js",
+          "app/src/js/APP.Switch.js",
+          "app/src/js/APP.Geolocation.js",
+          "app/src/js/APP.Home.js",
+          "app/src/js/APP.Request.js",
+          "app/src/js/APP.List.js"
         ],
 
         "app/dist/js/libs.min.js": [
-          "app/src/js/libs/angular/angular.min.js",
-          "app/src/js/libs/angular-route/angular-route.min.js"
+          "app/src/js/libs/infobox_packed.js",
+          "app/src/js/libs/jquery/dist/jquery.js",
+          "app/src/js/libs/bootstrap-switch/dist/js/bootstrap-switch.min.js"
         ]
       }
     }

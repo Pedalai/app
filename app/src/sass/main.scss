@@ -1,10 +1,16 @@
 // Reset
 @import '_reset';
 
-// Structure
-@import '_structure';
+// Grid
+@import 'libs/grid';
 
 // Custom
+@import '_fonts';
 @import '_base';
 @import '_components';
+
+// General styles
 @import '_general';
+
+// Libs
+@import 'libs/bootstrap-switch';

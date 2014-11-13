@@ -25,6 +25,8 @@
     "angular-route": "~1.2.25"
   },
   "devDependencies": {
-    "angular-bootstrap-switch": "~0.3.0"
+    "angular-bootstrap-switch": "~0.3.0",
+    "bootstrap-switch": "~3.2.1",
+    "jquery": "~2.1.1"
   }
 }
