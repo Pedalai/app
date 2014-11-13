@@ -1,5 +1,4 @@
 var APP = APP || {};
-
 APP.Request = {
   makeRequest: function(url, params){
     return $.ajax({

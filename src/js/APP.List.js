@@ -12,7 +12,7 @@ APP.Geolocation.Home.List = {
       var element = $(event.currentTarget),
           id = element.attr('id'),
           request;
-      
+
       $('.main-section').empty();
 
       if (that.pai()._objResponse !== null) {

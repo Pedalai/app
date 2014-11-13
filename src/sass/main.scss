@@ -1,15 +1,16 @@
-// reset
-@import "compass/reset";
+// Reset
+@import '_reset';
 
-// base
-@import "base";
+// Grid
+@import 'libs/grid';
 
-// partials
-// @import "partials/sprite-generator";
-@import "partials/fonts";
-@import "partials/general";
-@import "partials/home";
+// Custom
+@import '_fonts';
+@import '_base';
+@import '_components';
 
-// components
-// @import "components/button";
-// @import "components/form";
+// General styles
+@import '_general';
+
+// Libs
+@import 'libs/bootstrap-switch';

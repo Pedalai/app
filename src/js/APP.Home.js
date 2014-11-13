@@ -12,7 +12,7 @@ APP.Geolocation.Home = {
     _map: null,
 
     setUp: function(){
-      
+
     },
 
     // método que cria o mapa e marca a posição do usuário
@@ -21,7 +21,7 @@ APP.Geolocation.Home = {
           latitude   = APP.Geolocation._latitude,
           longitude  = APP.Geolocation._longitude,
           myLatlng   = new google.maps.LatLng(latitude, longitude),
-          
+
           mapOptions = {
             zoom: 12,
             center: myLatlng,
@@ -55,7 +55,7 @@ APP.Geolocation.Home = {
       that._map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
       // marcador personalizado;
-      image = 'http://google-maps-icons.googlecode.com/files/cycling.png';
+      image = 'src/images/user.png';
 
       marker = new google.maps.Marker({
         position: myLatlng,
@@ -71,7 +71,7 @@ APP.Geolocation.Home = {
         maxWidth: 0,
         pixelOffset: new google.maps.Size(-85, 0),
         zIndex: null,
-        boxStyle: { 
+        boxStyle: {
           marginTop: '10px',
           width: '170px'
         },
@@ -83,8 +83,8 @@ APP.Geolocation.Home = {
         enableEventPropagation: false
       };
 
-      var infobox = new InfoBox(myOptions);
-      infobox.open(that.pai().Map._map, marker);
+      // var infobox = new InfoBox(myOptions);
+      // infobox.open(that.pai().Map._map, marker);
 
       // ativa o método que cria as ciclofaixas depois que o mapa é criado
       if (that._map !== null) {
@@ -106,7 +106,8 @@ APP.Geolocation.Home = {
           },
           request = $.when(APP.Request.makeRequest(path, params));
 
-      request.done(function(response){console.log(response);
+      request.done(function(response){
+        // console.log(response);
         var c, countCoordinates,
             colors = [
               "#FF0000", // Ciclovia - red
@@ -162,18 +163,19 @@ APP.Geolocation.Home = {
 
           // marcador de cada ciclovia
           if (DrivePath.length % 2 == 0) {
+            console.log('O value.id é: ' + value.name);
             var customMarker = new google.maps.Marker({
               position: new google.maps.LatLng(DrivePath[DrivePath.length / 2].k, DrivePath[DrivePath.length / 2].B),
               map: that.pai().Map._map,
               id: value.id,
-              icon: 'src/images/location.svg'
+              icon: 'src/images/icones/icon-pracas.png'
             });
           } else {
             var customMarker = new google.maps.Marker({
               position: new google.maps.LatLng(DrivePath[(DrivePath.length + 1) / 2].k, DrivePath[(DrivePath.length + 1) / 2].B),
               map: that.pai().Map._map,
               id: value.id,
-              icon: 'src/images/location.svg'
+              icon: 'src/images/icones/icon-ciclovias.png'
             });
           }
 
@@ -187,7 +189,7 @@ APP.Geolocation.Home = {
             maxWidth: 0,
             pixelOffset: new google.maps.Size(-140, 0),
             zIndex: null,
-            boxStyle: { 
+            boxStyle: {
               marginTop: '13px',
               width: '280px'
             },
@@ -230,7 +232,7 @@ APP.Geolocation.Home = {
                         destination: end,
                         travelMode: google.maps.TravelMode.DRIVING
                       };
-              
+
                   directionsService.route(request, function(response, status) {
                     if (status == google.maps.DirectionsStatus.OK) {console.log(response);
                       directionsDisplay.setDirections(response);

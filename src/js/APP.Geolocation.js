@@ -27,7 +27,7 @@ APP.Geolocation = {
     APP.Geolocation._longitude = dataPosition.coords.longitude;
 
     // ativa o método que cria o mapa
-    APP.Geolocation._latitude  !== null && 
+    APP.Geolocation._latitude  !== null &&
     APP.Geolocation._longitude !== null ? APP.Geolocation.Home.Map.createMap() : APP.Geolocation.getLocation();
   },
 
