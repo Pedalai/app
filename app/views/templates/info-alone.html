@@ -1,0 +1,23 @@
+<md-bottom-sheet class="md-list md-has-header">
+  <md-subheader>Alone</md-subheader>
+  <md-list>
+    <md-list-item ng-repeat="item in items">
+
+        <md-icon md-svg-src="{{item.icon}}"></md-icon>
+
+        <h3>{{ item.title }}</h3>
+        <!-- <p>{{ item.address }}</p> -->
+        <!-- <p>{{ item.distance }}</p> -->
+        <!-- <p>{{ item.lat }}</p> -->
+        <!-- <p>{{ item.lng }}</p> -->
+
+        <!-- <span class="md-inline-list-icon-label"></span> -->
+        <!-- <span class="md-inline-list-icon-label"></span> -->
+        <!-- <span class="md-inline-list-icon-label">{{ item.distance }}</span> -->
+        <!-- <span class="md-inline-list-icon-label">{{ item.lat }}</span> -->
+        <!-- <span class="md-inline-list-icon-label">{{ item.lng }}</span> -->
+    </md-list-item>
+
+    <md-button class="md-list-item-content" ng-click="hideInfo($index)">Traçar rota</md-button>
+  </md-list>
+</md-bottom-sheet>

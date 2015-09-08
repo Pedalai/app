@@ -1,0 +1,25 @@
+<md-bottom-sheet class="md-list md-has-header card-full">
+  <!-- <md-subheader>Group</md-subheader>
+  <md-list>
+    <md-list-item ng-repeat="item in items">
+        <md-icon md-svg-src="{{item.icon}}"></md-icon>
+        <h3>{{ item.title }}</h3>
+    </md-list-item>
+
+    <md-button class="md-list-item-content" ng-click="hideInfo($index)">Traçar rota</md-button>
+  </md-list> -->
+
+    <md-card ng-repeat="group in items">
+      <img ng-src="{{ group.image }}" class="md-card-image" alt="{{ group.title }}">
+      <md-card-content>
+        <h2 class="md-title">{{ group.title }}</h2>
+        <p>
+          {{ group.content }}
+        </p>
+      </md-card-content>
+      <div class="md-actions" layout="row" layout-align="end center">
+        <md-button>{{ group.facebook }}</md-button>
+        <md-button>{{ group.contactNumber }}</md-button>
+      </div>
+    </md-card>
+</md-bottom-sheet>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pedalai</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="pedalaiAppApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <md-content>
+      <md-toolbar class="header-primary">
+        <div class="md-toolbar-tools">
+          <h2 class="app-title">
+            <span><img src="images/logo.svg" alt=""></span>
+          </h2>
+        </div>
+      </md-toolbar>
+
+      <md-toolbar class="sub-header" ng-controller="MainCtrl">
+        <h2 class="md-toolbar-tools">
+          <div class="info-type">
+            <span class="title">Vou pedalar</span>
+            <span class="type">{{ pedalType }}</span>
+          </div>
+
+          <md-button class="md-raised md-primary switch alone" ng-click="pedalAlone()" aria-label="Sozinho">
+            <md-icon md-svg-src="images/icon-alone.svg"></md-icon>
+          </md-button>
+
+          <md-button class="md-raised md-primary switch" ng-click="pedalGroup()" aria-label="Em grupo">
+            <md-icon md-svg-src="images/icon-group.svg"></md-icon>
+          </md-button>
+        </h2>
+      </md-toolbar>
+    </md-content>
+
+    <main class="container">
+      <div ng-view=""></div>
+    </main>
+
+    <footer class="footer-primary"></footer>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/group.js"></script>
+        <script src="scripts/services/mapservice.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

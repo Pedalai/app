@@ -1,7 +1,5 @@
-config.php
-config.sample.php
-.DS_Store
-node_modules/*
-.sass-cache/*
-.git/*
-migration/
+/node_modules
+/dist
+/.tmp
+/.sass-cache
+/bower_components
