@@ -7,64 +7,45 @@
 // ——————————————
 
 // Hexadecimals
-$blue-primary:                    #3f6f92; // link menu
-$blue-lighten:                    #4FC4F6; // background-tab
-$blue-think:                      #E0E9F6; // background-figure
-$blue-cleaner:                    #5FA9DD; // background-twitter
-$blue-secondary:                  #428BCA; // news link
-$white-light:                     #D7E0EF; // background pages
-$blue-clean:                      #E7EFFA; // background twiiter
-$blue-dark:                       #3A5898; // background button
-$blue-other:                      #244C68; // some text
-$white-primary:                   #EEEEEE; // hover-menu | background-nav
-$red-primary:                     #D33041; // button
-$gray-primary:                    #C6C6C6; // border
-$brown-primary:                   #898989; // some text
-$brown-secondary:                 #595959; // some text
+$blue-hight:                   #006BAF;
+$blue-dark:                    #0071C6;
+$blue-acqua:                   #00918C;
+$blue-light:                   #00A6CF;
+$green-acqua:                  #00B6B0;
+$green-clean:                  #00CD91;
+$green-darker:                 #00C353;
+$green-other:                  #19908B;
+$white:                        #FFFFFF;
+$brown:                        #616161;
 
 // RGB
-$blue-primary-rgb:                rgb(63,111,146);
-$blue-lighten-rgb:                rgb(79,196,246);
-$blue-think-rgb:                  rgb(224,233,246);
-$blue-cleaner-rgb:                rgb(231,239,250);
-$white-primary-rgb:               rgb(238,238,238);
-$red-primary-rgb:                 rgb(211,48,65);
-$gray-primary-rgb:                rgb(198,198,198);
-$white-light-rgb:                 rgb(215,224,239);
-$blue-clean-rgb:                  rgb(231,239,250);
-$blue-dark-rgb:                   rgb(58,88,152);
-$blue-other-rgb:                  rgb(36,76,104);
-$brown-primary-rgb:               rgb(137,137,137);
-$brown-secondary-rgb:             rgb(89,89,89);
-$blue-secondary-rgb:              rgb(66,139,202);
+$blue-hight-rgb:               rgb(0,107,175);
+$blue-dark-rgb:                rgb(0,113,198);
+$blue-acqua-rgb:               rgb(0,145,140);
+$blue-light-rgb:               rgb(0,166,207);
+$green-acqua-rgb:              rgb(0,182,176);
+$green-clean-rgb:              rgb(0,205,145);
+$green-darker-rgb:             rgb(0,195,83);
+$green-other-rgb:              rgb(25,144,139);
+$white-rgb:                    rgb(255, 255, 255);
 
 // Names
-$link-menu:                        $blue-primary;
-$bg-tab:                           $blue-lighten;
-$bg-figure:                        $blue-think;
-$bg-twitter:                       $blue-cleaner;
-$bg-nav:                           $white-primary;
-$btn-primary:                      $red-primary;
-$border-primary:                   $gray-primary;
-$bg-primary:                       $white-light;
-$bg-secondary:                     $blue-clean;
-$bg-button:                        $blue-dark;
-$text-primary:                     $blue-other;
-$text-secondary:                   $brown-primary;
-$text-other:                       $brown-secondary;
-$news-link:                        $blue-secondary;
+$green-primary:                 $green-acqua;
+$green-secondary:               $green-other;
+$some-text:                     $white;
+$title-primary:                 $blue-light;
+$text-primary:                  $brown;
+
 
 
 // ——————————————————————
 //     Mixins
 // ——————————————————————
 
-
 //
-// Gradient
+// Backgrounds
 //
 
-// Background Images
 @mixin path ($rulers...) {
   background-image: url("../images/"+$rulers);
 }
@@ -72,6 +53,10 @@ $news-link:                        $blue-secondary;
 @mixin rgba ($color, $alpha) {
   background-color: rgba($color, $alpha);
 }
+
+//
+// Gradient
+//
 
 @mixin linear-gradient ($angle, $startColor, $endColor) {
   background-color: $startColor;
