@@ -8,10 +8,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // endbower
 
 // Typography styles
-// @import '_typography';
+@import '_typography';
 
 // Base styles
-// @import '_base';
+@import '_base';
 
 // General styles
-// @import '_general';
+@import '_general';
