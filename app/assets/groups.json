@@ -1,6 +1,5 @@
 [
   {
-    "icon": "../images/icons/bike.svg",
     "title": "Pedalando com Tatu",
     "level": "intermediário",
     "address": "Rua padre carapuceiro 190, Recife - PE",
@@ -9,11 +8,11 @@
     "image": "https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xpt1/v/t1.0-9/11891100_761245017319164_7406895505233802647_n.jpg?oh=76a9cfb8703d165da42db603ece0eae4&oe=5665D59D&__gda__=1450157977_881afd9a10574b35f03eb9731ce02760",
     "content": "Grupo destinado aos passeios ciclisticos noturnos em Recife e adjacentes, com a finalidade de nos divertir e desfrutar desses esporte maravilhoso que nos condicionam cada vez mais.",
     "days": "segunda, quarta e sexta",
+    "hours": "20hr",
     "value": "Free",
-    "apoio": true,
+    "apoio": "sim",
     "contact": "Tatu",
     "facebook": "https://www.facebook.com/groups/pedalandocomtatu/",
-    "contactNumber": "+55 81 9 8888-8888",
-    "iconGroup": "../images/marker.png"
+    "contactNumber": "+558198888-8888"
   }
 ]

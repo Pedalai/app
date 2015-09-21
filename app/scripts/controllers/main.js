@@ -109,11 +109,11 @@ angular.module('pedalaiAppApp')
 
       google.maps.event.addListener(marcadorPersonalizado, 'click', function($event) {
         // abre as informações sozinho
-        $scope.showMoreInfo($event);
+        // $scope.showMoreInfo($event);
 
         // abre as informações em grupo
         // if ($scope.pedalType !== 'Sozinho')
-            // $scope.showMoreInfoGroup($event);
+            $scope.showMoreInfoGroup($event);
       });
     };
 
@@ -122,7 +122,6 @@ angular.module('pedalaiAppApp')
     };
 
     // ====
-
 
     // Pedalar sozinho
     $scope.pedalAlone = function() {
@@ -154,24 +153,17 @@ angular.module('pedalaiAppApp')
     };
 
     $scope.showMoreInfoGroup = function($event) {
-      console.log('Grupo');
-      // $mdBottomSheet.show({
-      //   templateUrl: '../../views/templates/info-group.html',
-      //   controller: 'GroupCtrl',
-      //   targetEvent: $event
-      // }).then(function(clickedItem) {
-      //   console.log(clickedItem.name + ' clicked!');
-      // });
+      $mdBottomSheet.show({
+        templateUrl: '../../views/templates/info-group.html',
+        controller: 'GroupCtrl',
+        targetEvent: $event
+      }).then(function(clickedItem) {
+        console.log(clickedItem + ' clicked!');
+      });
     };
     // ====
 
-    // $scope.hideInfo = function($index) {
-    //   var clickedItem = $scope.items[$index];
-    //   $mdBottomSheet.hide(clickedItem);
-    // };
-
-
-    // execução das funções
+    // Execução das funções
     $scope.geolocation();
 
   }]);

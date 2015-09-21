@@ -1,25 +1,44 @@
-<md-bottom-sheet class="md-list md-has-header card-full">
-  <!-- <md-subheader>Group</md-subheader>
-  <md-list>
-    <md-list-item ng-repeat="item in items">
-        <md-icon md-svg-src="{{item.icon}}"></md-icon>
-        <h3>{{ item.title }}</h3>
-    </md-list-item>
-
-    <md-button class="md-list-item-content" ng-click="hideInfo($index)">Traçar rota</md-button>
-  </md-list> -->
-
-    <md-card ng-repeat="group in items">
+<md-bottom-sheet class="md-list md-has-header card-full" ng-controller="GroupCtrl">
+  <md-card ng-repeat="group in groups" class="no-margin">
+    <figure class="wrapper-card-image">
       <img ng-src="{{ group.image }}" class="md-card-image" alt="{{ group.title }}">
-      <md-card-content>
-        <h2 class="md-title">{{ group.title }}</h2>
-        <p>
-          {{ group.content }}
-        </p>
-      </md-card-content>
-      <div class="md-actions" layout="row" layout-align="end center">
-        <md-button>{{ group.facebook }}</md-button>
-        <md-button>{{ group.contactNumber }}</md-button>
-      </div>
-    </md-card>
+    </figure>
+
+    <md-card-content class="md-card-content">
+      <h2 class="md-title">{{ group.title }}</h2>
+      <span class="level">( {{ group.level }} )</span>
+
+      <p> {{ group.content }} </p>
+
+      <ul>
+        <li class="dias">
+          <span class="subtitle">Dias/Horários</span>
+          <p>{{ group.days }} : {{ group.hours }}</p>
+          </li>
+
+        <li class="valor">
+          <span class="subtitle">Valor</span>
+          <p>{{ group.value }}</p>
+        </li>
+
+        <li class="local">
+          <span class="subtitle">Local de encontro</span>
+          <p>{{ group.address }}</p>
+        </li>
+
+        <li class="apoio">
+          <span class="subtitle">Carro de Apoio</span>
+          <p>{{ group.apoio }}</p>
+        </li>
+
+        <li class="apoio">
+          <span class="subtitle">Líderes do Grupo</span>
+          <p>{{ group.contact }}</p>
+        </li>
+      </ul>
+    </md-card-content>
+
+    <a class="button facebook" ng-href="{{ group.facebook }}" target="_blank">Facebook</a>
+    <a class="button telephone" ng-href="tel:{{ group.contactNumber }}">Ligar</a>
+  </md-card>
 </md-bottom-sheet>

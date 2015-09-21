@@ -98,11 +98,6 @@ body {
   background-color: black;
 }
 
-.card-full {
-  top: 49px;
-  height: 100%;
-}
-
 // ====
 
 
@@ -111,13 +106,10 @@ body {
 // Cards
 //
 
-.md-list {
-  padding: 0;
-}
+// Sozinho
+.md-list { padding: 0; }
 
-.card-alone {
-  @extend .row;
-}
+.card-alone { @extend .row; }
 
 .tracar-rota {
   height: 40px;
@@ -192,6 +184,55 @@ body {
     color: $title-primary;
     font-size: ($fs-normal)+.2;
   }
+}
+
+// Grupo
+.card-full {
+  top: 50px;
+  height: 100%;
+}
+
+.wrapper-card-image {
+  max-height: 280px;
+  @include bsd(3px, 0, 8px, rgba(0, 0, 0, .5));
+
+  img { max-width: 100%; }
+}
+
+.md-card-image {
+  position: relative;
+}
+
+.md-card-content {
+  padding-top: 0;
+
+  h2 {
+    font-size: ($fs-normal)*2;
+  }
+
+  span {
+    font-size: ($fs-normal);
+  }
+
+  p {
+    font-size: ($fs-normal)+.2;
+  }
+
+  .subtitle { color: $title-primary; }
+}
+
+.button {
+  width: 90%;
+  padding: 10px 0;
+  margin: 0 auto 10px 5%;
+  text-align: center;
+  @include bdr(3px);
+  color: $some-text;
+  font-size: ($fs-medium)-1;
+
+  &.facebook { background-color: $btn-facebook; }
+
+  &.telephone { background-color: $green-primary; }
 }
 
 // ====
