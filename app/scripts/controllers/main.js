@@ -13,19 +13,9 @@ angular.module('pedalaiAppApp')
     var geocoder, myLatlng, mapOptions, infowindow, map,
         marcadorPersonalizado, styles, styledMap;
 
-    $scope.items = [
-      {
-        icon: '../../images/icons/tree.svg',
-        title: 'Praça do Arsenal',
-        address: 'Rua do Bom Jesus, Recife, PE',
-        distance: '2.4km',
-        lat: 8.19584289,
-        lng: 34.9361451
-      }
-    ];
-
     $scope.pedalType = 'Sozinho';
 
+    // Pega a localização do usuário e mostra no mapa
     $scope.geolocation = function() {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition($scope.showMap, $scope.errorGeolocation);
@@ -59,12 +49,6 @@ angular.module('pedalaiAppApp')
       infowindow = new google.maps.InfoWindow({
         content: 'Você está aqui!',
         maxWidth: 700
-      });
-
-      google.maps.event.addListener(marcadorPersonalizado, 'click', function($event) {
-        console.log($scope.pedalType);
-          // $scope.showMoreInfo($event); // open info alone
-          $scope.showMoreInfoGroup($event); // open info group
       });
 
       // Estilizando o mapa;
@@ -120,56 +104,74 @@ angular.module('pedalaiAppApp')
       map.mapTypes.set('pedalai_map', styledMap);
       map.setMapTypeId('pedalai_map');
 
+      // cria uma nova instância do geocoder para caso seja utilizado
       geocoder = new google.maps.Geocoder();
+
+      google.maps.event.addListener(marcadorPersonalizado, 'click', function($event) {
+        // abre as informações sozinho
+        $scope.showMoreInfo($event);
+
+        // abre as informações em grupo
+        // if ($scope.pedalType !== 'Sozinho')
+            // $scope.showMoreInfoGroup($event);
+      });
     };
 
     $scope.errorGeolocation = function(msg) {
       alert('Ocorreu um erro na geolocalização: ', msg);
     };
 
+    // ====
+
+
+    // Pedalar sozinho
+    $scope.pedalAlone = function() {
+      $scope.pedalType = 'Sozinho';
+
+      mapService.getCiclovias(function(data) {
+        $scope.ciclovias = data;
+      });
+    };
+
     $scope.showMoreInfo = function($event) {
       $mdBottomSheet.show({
         templateUrl: '../../views/templates/info-alone.html',
-        controller: 'MainCtrl',
+        controller: 'AloneCtrl',
         targetEvent: $event
       }).then(function(clickedItem) {
-        console.log(clickedItem.name + ' clicked!');
+        console.log(clickedItem + ' clicked!');
+      });
+    };
+    // ====
+
+    // Pedalar em Grupo
+    $scope.pedalGroup = function() {
+      $scope.pedalType = 'Em grupo';
+
+      mapService.getGroups(function(data) {
+        $scope.groups = data;
       });
     };
 
     $scope.showMoreInfoGroup = function($event) {
-      $mdBottomSheet.show({
-        templateUrl: '../../views/templates/info-group.html',
-        controller: 'GroupCtrl',
-        targetEvent: $event
-      }).then(function(clickedItem) {
-        console.log(clickedItem.name + ' clicked!');
-      });
-    };
-
-    $scope.hideInfo = function($index) {
-      var clickedItem = $scope.items[$index];
-      $mdBottomSheet.hide(clickedItem);
-    };
-
-    $scope.pedalAlone = function() {
-      $scope.pedalType = 'Sozinho';
-
-      // carrega os dados da prefeitura do Recife e mosta no mapa
-      mapService.getRecifeData(function(data) {
-        console.log(data);
-      });
-    };
-
-    $scope.pedalGroup = function() {
-      $scope.pedalType = 'Em grupo';
-
-
-      // mapService.getGroups(function(data) {
-      //   console.log(data);
+      console.log('Grupo');
+      // $mdBottomSheet.show({
+      //   templateUrl: '../../views/templates/info-group.html',
+      //   controller: 'GroupCtrl',
+      //   targetEvent: $event
+      // }).then(function(clickedItem) {
+      //   console.log(clickedItem.name + ' clicked!');
       // });
     };
+    // ====
 
+    // $scope.hideInfo = function($index) {
+    //   var clickedItem = $scope.items[$index];
+    //   $mdBottomSheet.hide(clickedItem);
+    // };
+
+
+    // execução das funções
     $scope.geolocation();
 
   }]);

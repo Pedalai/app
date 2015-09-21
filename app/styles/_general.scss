@@ -106,6 +106,98 @@ body {
 // ====
 
 
+
+//
+// Cards
+//
+
+.md-list {
+  padding: 0;
+}
+
+.card-alone {
+  @extend .row;
+}
+
+.tracar-rota {
+  height: 40px;
+  outline: none;
+  border: none;
+  @extend .no-padding;
+  position: relative;
+  text-align: center;
+  @include apr(none);
+  color: $some-text;
+  font-size: ($fs-medium)-1;
+  background-color: $title-primary;
+
+  &::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 120px;
+    z-index: 10;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    @include path('icons/tracar-rota.png');
+  }
+}
+
+.ciclovia-item {
+  height: auto;
+  min-height: 80px;
+  @include bsd(0, 0, 15px, rgba(0, 0, 0, .3));
+}
+
+.ciclovia-icon {
+  height: 70px;
+  width: 70px;
+  overflow: hidden;
+  @include bdr(100%);
+  display: inline-block;
+  margin: 0 10px 0 30px;
+
+  img {
+    max-width: 90%;
+    margin-top: 10px;
+  }
+}
+
+.ciclovia-info {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+
+  h3 {
+    font-family: $ff-light;
+    color: $title-primary;
+    font-size: ($fs-medium)-.5;
+    margin-bottom: 0;
+  }
+
+  p {
+    color: $text-primary;
+    font-size: ($fs-normal)+.4
+  }
+
+  span {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: $title-primary;
+    font-size: ($fs-normal)+.2;
+  }
+}
+
+// ====
+
+
+
 //
 // Media queries
 //

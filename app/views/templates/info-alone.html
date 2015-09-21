@@ -1,23 +1,19 @@
-<md-bottom-sheet class="md-list md-has-header">
-  <md-subheader>Alone</md-subheader>
-  <md-list>
-    <md-list-item ng-repeat="item in items">
+<md-bottom-sheet class="md-list md-has-header card-alone" ng-controller="AloneCtrl">
+  <md-list class="md-list">
+    <md-list-item ng-repeat="ciclovia in ciclovias" class="ciclovia-item">
+      <figure class="ciclovia-icon">
+        <img src="images/icons/{{ ciclovia.icon }}.png" alt="">
+      </figure>
 
-        <md-icon md-svg-src="{{item.icon}}"></md-icon>
-
-        <h3>{{ item.title }}</h3>
-        <!-- <p>{{ item.address }}</p> -->
-        <!-- <p>{{ item.distance }}</p> -->
-        <!-- <p>{{ item.lat }}</p> -->
-        <!-- <p>{{ item.lng }}</p> -->
-
-        <!-- <span class="md-inline-list-icon-label"></span> -->
-        <!-- <span class="md-inline-list-icon-label"></span> -->
-        <!-- <span class="md-inline-list-icon-label">{{ item.distance }}</span> -->
-        <!-- <span class="md-inline-list-icon-label">{{ item.lat }}</span> -->
-        <!-- <span class="md-inline-list-icon-label">{{ item.lng }}</span> -->
+      <div class="ciclovia-info">
+        <h3>{{ ciclovia.title }}</h3>
+        <p>{{ ciclovia.address }}</p>
+        <span>{{ ciclovia.distance }}</span>
+      </div>
     </md-list-item>
 
-    <md-button class="md-list-item-content" ng-click="hideInfo($index)">Traçar rota</md-button>
+    <button class="col-xs-12 tracar-rota" ng-click="tracarRota($index, ciclovia.lat)">
+      Traça rota
+    </button>
   </md-list>
 </md-bottom-sheet>
