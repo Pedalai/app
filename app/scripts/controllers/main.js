@@ -109,10 +109,10 @@ angular.module('pedalaiAppApp')
 
       google.maps.event.addListener(marcadorPersonalizado, 'click', function($event) {
         // abre as informações sozinho
-        // $scope.showMoreInfo($event);
+        $scope.showMoreInfo($event);
 
         // abre as informações em grupo
-        // if ($scope.pedalType !== 'Sozinho')
+        if ($scope.pedalType !== 'Sozinho')
             $scope.showMoreInfoGroup($event);
       });
     };
