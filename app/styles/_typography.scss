@@ -1,0 +1,59 @@
+// —————————————————————————
+//     Typography
+// —————————————————————————
+
+// Icon
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// ==
+
+// Size
+$fs-root:           62.5%;
+$fs-normal:         1.2rem; // 18px, 20px, 24px,
+$fs-medium:         3.0rem; // 36px
+// ==
+
+// Family
+$ff-regular:       'source_sans_proregular';
+$ff-bold:          'source_sans_problack';
+$ff-light:         'source_sans_prolight';
+// ==
+
+// Custom Font Face
+@font-face {
+    font-family: 'source_sans_problack';
+    src: url('../fonts/sourcesanspro-black-webfont.eot');
+    src: url('../fonts/sourcesanspro-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcesanspro-black-webfont.woff2') format('woff2'),
+         url('../fonts/sourcesanspro-black-webfont.woff') format('woff'),
+         url('../fonts/sourcesanspro-black-webfont.ttf') format('truetype'),
+         url('../fonts/sourcesanspro-black-webfont.svg#source_sans_problack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'source_sans_prolight';
+    src: url('../fonts/sourcesanspro-light-webfont.eot');
+    src: url('../fonts/sourcesanspro-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcesanspro-light-webfont.woff2') format('woff2'),
+         url('../fonts/sourcesanspro-light-webfont.woff') format('woff'),
+         url('../fonts/sourcesanspro-light-webfont.ttf') format('truetype'),
+         url('../fonts/sourcesanspro-light-webfont.svg#source_sans_prolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'source_sans_proregular';
+    src: url('../fonts/sourcesanspro-regular-webfont.eot');
+    src: url('../fonts/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcesanspro-regular-webfont.woff2') format('woff2'),
+         url('../fonts/sourcesanspro-regular-webfont.woff') format('woff'),
+         url('../fonts/sourcesanspro-regular-webfont.ttf') format('truetype'),
+         url('../fonts/sourcesanspro-regular-webfont.svg#source_sans_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

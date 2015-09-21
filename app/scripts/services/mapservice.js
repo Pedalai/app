@@ -11,6 +11,7 @@ angular.module('pedalaiAppApp')
   .service('mapService', ['$http', function ($http) {
     var obj = {};
 
+    // ====
     var recifeDados = [];
 
     obj.getRecifeData = function(callback) {
@@ -23,19 +24,38 @@ angular.module('pedalaiAppApp')
           console.log('Error getRecifeData: ', error);
         })
     };
+    // ====
 
+
+    // ====
+    var ciclovias = [];
+
+    obj.getCiclovias = function(callback) {
+      $http.get('../../assets/ciclovias.json')
+        .success(function(data) {
+          ciclovias = data;
+          // console.log('Success getCiclovias: ', ciclovias);
+          callback(data);
+        }).error(function(error) {
+          console.log('Error getCiclovias: ', error);
+        })
+    };
+    // ====
+
+    // ====
     var groups = [];
 
     obj.getGroups = function(callback) {
       $http.get('../../assets/groups.json')
         .success(function(data) {
           groups = data;
-          // console.log('Success getGroups: ', groups);
+          console.log('Success getGroups: ', groups);
           callback(data);
         }).error(function(error) {
           console.log('Error getGroups: ', error);
         })
     };
+    // ====
 
     return obj;
   }]);

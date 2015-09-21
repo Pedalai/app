@@ -2,9 +2,52 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Pedalai</title>
+    <title>Pedalaí</title>
+
+    <!-- META TAGS -->
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="keywords" content="pedalai, bike, bicicleta, pedal, grupos de pedal, pedal recife">
+    <meta name="DC.title" content="Pedalaí">
+    <meta name="DC.publisher" content="Thulioph">
+    <meta name="DC.creator.address" content="thulioph@gmail.com">
+    <meta name="robots" content="all">
+    <meta name="author" content="Thulio Philipe">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="copyright" content="Pedalaí - Todos os direitos reservados">
+
+    <!-- FACEBOOK  -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://app.pedalai.com.br">
+    <meta property="og:title" content="Pedalaí">
+    <meta property="og:image" content="https://github.com/thulioph/catrina/blob/gh-pages/dist/images/og-facebook.png">
+    <meta property="og:description" content="Melhorando a mobilidade urbana.">
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" value="summary_large_image">
+    <meta name="twitter:card" value="summary">
+    <meta name="twitter:creator" value="@pedalaiapp">
+    <meta name="twitter:site" value="http://guardioesdasaude.org">
+    <meta name="twitter:title" content="Pedalaí">
+    <meta name="twitter:description" content="Melhorando a mobilidade urbana.">
+    <meta name="twitter:image:src" content="https://github.com/thulioph/catrina/blob/gh-pages/dist/images/og-facebook.png">
+
+    <!-- APPLE TOUCH ICON -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="touch-icon@2x.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="touch-icon@2x.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad@2x.png">
+
+    <!-- HUMANS -->
+    <link type="text/plain" rel="author" href="humans.txt" />
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -21,39 +64,38 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <md-content>
-      <md-toolbar class="header-primary">
-        <div class="md-toolbar-tools">
-          <h2 class="app-title">
-            <span><img src="images/logo.svg" alt=""></span>
-          </h2>
-        </div>
-      </md-toolbar>
-
-      <md-toolbar class="sub-header" ng-controller="MainCtrl">
-        <h2 class="md-toolbar-tools">
-          <div class="info-type">
-            <span class="title">Vou pedalar</span>
-            <span class="type">{{ pedalType }}</span>
+    <section class="container-flui">
+      <div class="row">
+        <md-toolbar class="header-primary">
+          <div class="md-toolbar-tools">
+            <h2 class="col-xs-12 app-title">
+              <span><img src="images/logo.svg" alt=""></span>
+            </h2>
           </div>
+        </md-toolbar>
 
-          <md-button class="md-raised md-primary switch alone" ng-click="pedalAlone()" aria-label="Sozinho">
-            <md-icon md-svg-src="images/icon-alone.svg"></md-icon>
-          </md-button>
+        <md-toolbar class="col-xs-12 sub-header" ng-controller="MainCtrl">
+          <h2 class="md-toolbar-tools">
+            <div class="col-xs-12 col-sm-3 no-padding info-type">
+              <span class="title">Vou pedalar</span>
+              <span class="col-xs-12 col-sm-3 type">{{ pedalType }}</span>
+            </div>
 
-          <md-button class="md-raised md-primary switch" ng-click="pedalGroup()" aria-label="Em grupo">
-            <md-icon md-svg-src="images/icon-group.svg"></md-icon>
-          </md-button>
-        </h2>
-      </md-toolbar>
-    </md-content>
+            <md-button class="md-raised md-primary switch alone" ng-click="pedalAlone()" aria-label="Sozinho">
+              <md-icon md-svg-src="images/icon-alone.svg"></md-icon>
+            </md-button>
 
-    <main class="container">
+            <md-button class="md-raised md-primary switch" ng-click="pedalGroup()" aria-label="Em grupo">
+              <md-icon md-svg-src="images/icon-group.svg"></md-icon>
+            </md-button>
+          </h2>
+        </md-toolbar>
+      </div>
+    </section>
+
+    <main class="main">
       <div ng-view=""></div>
     </main>
-
-    <footer class="footer-primary"></footer>
-
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -89,6 +131,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/group.js"></script>
         <script src="scripts/services/mapservice.js"></script>
+        <script src="scripts/controllers/alone.js"></script>
         <!-- endbuild -->
 </body>
 </html>
